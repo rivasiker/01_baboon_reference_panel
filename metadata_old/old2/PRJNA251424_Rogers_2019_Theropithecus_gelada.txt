@@ -1,0 +1,4 @@
+study_accession	sample_accession	experiment_accession	run_accession	tax_id	scientific_name	fastq_ftp	sample_alias
+PRJNA251424	SAMN06167567	SRX2521053	SRR5207263	9565	Theropithecus gelada	ftp.sra.ebi.ac.uk/vol1/fastq/SRR520/003/SRR5207263/SRR5207263_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR520/003/SRR5207263/SRR5207263_2.fastq.gz	38168
+PRJNA251424	SAMN06167567	SRX2521053	SRR5207264	9565	Theropithecus gelada	ftp.sra.ebi.ac.uk/vol1/fastq/SRR520/004/SRR5207264/SRR5207264_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR520/004/SRR5207264/SRR5207264_2.fastq.gz	38168
+PRJNA251424	SAMN06167567	SRX2521054	SRR5207265	9565	Theropithecus gelada	ftp.sra.ebi.ac.uk/vol1/fastq/SRR520/005/SRR5207265/SRR5207265_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR520/005/SRR5207265/SRR5207265_2.fastq.gz	38168

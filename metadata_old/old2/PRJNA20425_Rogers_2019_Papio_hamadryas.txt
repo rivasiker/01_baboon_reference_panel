@@ -1,0 +1,10 @@
+study_accession	sample_accession	experiment_accession	run_accession	tax_id	scientific_name	fastq_ftp	sample_alias
+PRJNA20425	SAMN03073710	SRX758148	SRR1649189	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/009/SRR1649189/SRR1649189_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/009/SRR1649189/SRR1649189_2.fastq.gz	PHAM.P9-97124
+PRJNA20425	SAMN03073710	SRX758148	SRR1703173	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/003/SRR1703173/SRR1703173_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/003/SRR1703173/SRR1703173_2.fastq.gz	PHAM.P9-97124
+PRJNA20425	SAMN03073709	SRX758146	SRR1703171	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/001/SRR1703171/SRR1703171_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/001/SRR1703171/SRR1703171_2.fastq.gz	PHAM.P9-97074
+PRJNA20425	SAMN03073709	SRX758146	SRR1703172	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/002/SRR1703172/SRR1703172_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR170/002/SRR1703172/SRR1703172_2.fastq.gz	PHAM.P9-97074
+PRJNA20425	SAMN03073710	SRX758148	SRR1649188	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/008/SRR1649188/SRR1649188_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/008/SRR1649188/SRR1649188_2.fastq.gz	PHAM.P9-97124
+PRJNA20425	SAMN03073709	SRX758147	SRR1649186	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/006/SRR1649186/SRR1649186_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/006/SRR1649186/SRR1649186_2.fastq.gz	PHAM.P9-97074
+PRJNA20425	SAMN03073710	SRX758148	SRR1649187	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/007/SRR1649187/SRR1649187_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/007/SRR1649187/SRR1649187_2.fastq.gz	PHAM.P9-97124
+PRJNA20425	SAMN03073709	SRX758146	SRR1649185	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/005/SRR1649185/SRR1649185_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/005/SRR1649185/SRR1649185_2.fastq.gz	PHAM.P9-97074
+PRJNA20425	SAMN03073709	SRX758146	SRR1649184	9557	Papio hamadryas	ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/004/SRR1649184/SRR1649184_1.fastq.gz;ftp.sra.ebi.ac.uk/vol1/fastq/SRR164/004/SRR1649184/SRR1649184_2.fastq.gz	PHAM.P9-97074
