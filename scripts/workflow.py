@@ -124,15 +124,6 @@ def map_reads(infile, ref, outfile, tmp, done, done_prev):
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
 
-
-
-
-
-
-
-
-
-
 ########################################################################################################################
 #########################################---- SORT BAM FILE BY COORDINATE ----##########################################
 ########################################################################################################################
@@ -153,13 +144,13 @@ def sort_coordinates(infile, outfile, temp, done, done_prev):
 ######################################## ---- MERGE BAM FILES OF SAME INDIVIDUAL ---- ##########################################
 ################################################################################################################################
 
-def merge_bam(infile, outfile, done, done_prev):
+def merge_bams(infile, outfile, done, done_prev):
     """Sort bam file by coordinate."""
     inputs = [infile, done_prev]
     outputs = [done, outfile]
-    options = {'cores': 8, 'memory': "20g", 'walltime': "01:00:00"}
+    options = {'cores': 8, 'memory': "20g", 'walltime': "04:00:00"}
     spec = f"""
-        samtools merge -@8 -o {outfile} {" ".join(infile)}
+        samtools merge -@8 {outfile} {" ".join(infile)}
         touch {done}
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
@@ -180,20 +171,6 @@ def mark_and_remove_duplicates(infile, intermediate, metrics, outfile, temp, don
         touch {done}
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 #############################################################################################
 #################################---- GET AVG COVERAGE ----##################################
@@ -289,13 +266,22 @@ def genotype_gvcfs(infile, ref, outfile, done, done_prev):
 
 
 
+# chr_lst = [
+#     "NC_018152.2", "NC_018153.2", "NC_018154.2", "NC_018155.2", 
+#     "NC_018156.2", "NC_018157.2", "NC_018158.2", "NC_018159.2", 
+#     "NC_018160.2", "NC_018161.2", "NC_018162.2", "NC_018163.2", 
+#     "NC_018164.2", "NC_018165.2", "NC_018166.2", "NC_018167.2", 
+#     "NC_018168.2", "NC_018169.2", "NC_018170.2", "NC_018171.2", 
+#     "NC_018172.2", "NC_020006.2"
+# ]
+
 chr_lst = [
-    "NC_018152.2", "NC_018153.2", "NC_018154.2", "NC_018155.2", 
-    "NC_018156.2", "NC_018157.2", "NC_018158.2", "NC_018159.2", 
-    "NC_018160.2", "NC_018161.2", "NC_018162.2", "NC_018163.2", 
-    "NC_018164.2", "NC_018165.2", "NC_018166.2", "NC_018167.2", 
-    "NC_018168.2", "NC_018169.2", "NC_018170.2", "NC_018171.2", 
-    "NC_018172.2", "NC_020006.2"
+    "NC_044977.1", "NC_044978.1", "NC_044979.1", "NC_044980.1", 
+    "NC_044981.1", "NC_044982.1", "NC_044983.1", "NC_044984.1", 
+    "NC_044985.1", "NC_044986.1", "NC_044987.1", "NC_044988.1", 
+    "NC_044989.1", "NC_044990.1", "NC_044991.1", "NC_044992.1", 
+    "NC_044993.1", "NC_044994.1", "NC_044995.1", "NC_044996.1", 
+    "NC_044997.1", "NC_020006.2"
 ]
 
 # chr_lst = ["NC_018169.2", "NC_018170.2"]
@@ -308,7 +294,7 @@ path_to_samples = f"../../../../shared_data/sequencing_data/baboon_other_studies
 dct = {}
 n_sample = 2
 acc = 0
-with open("../metadata/PRJEB59576_Kuderna_2023.txt") as file:
+with open(f"../metadata/sample_names_{study_name}.tsv") as file:
     for line in file:
         if acc == 0:
             acc += 1
@@ -320,97 +306,110 @@ with open("../metadata/PRJEB59576_Kuderna_2023.txt") as file:
             dct[line[1]] = [line[3]]
         else: dct[line[1]].append(line[3])
         
-
+print(dct)
 
 # with open(f'../../../../shared_data/sequencing_data/baboon_other_studies/md5_{study_name}.md5', 'r') as file:
 #     sample_list = sorted(list(set([f.rstrip().split(' ')[1].split('/')[1].split('_')[0] for f in file])))
-        
-sample_list = []
-for i in dct.values():
-    sample_list = sample_list + i
-
 
 acc = 0
-for sample_name in sample_list:
-    if not os.path.exists(f'{path_to_samples}/{sample_name}_1.fastq.gz'): continue
-    if not os.path.exists(f'{path_to_samples}/{sample_name}_2.fastq.gz'): continue
-    # if all(os.path.exists(f"../done/08_call_variants/{sample_name}_{chr}") for chr in chr_lst): continue
-    acc += 1
-    gwf.target_from_template(
-        f"{sample_name}_FASTQ_to_uBAM", 
-        FASTQ_to_uBAM(
-            sample_name = sample_name,
-            fastq1 = f'{path_to_samples}/{sample_name}_1.fastq.gz',
-            fastq2 = f'{path_to_samples}/{sample_name}_2.fastq.gz',
-            outfile = f"../steps/01_uBAM_files/{sample_name}.bam",
-            done = f"../done/01_uBAM_files/{sample_name}"
-            )
-        )
-    gwf.target_from_template(
-        f"{sample_name}_mark_adapters", 
-        mark_adapters(
-            infile = f"../steps/01_uBAM_files/{sample_name}.bam",
-            outfile = f"../steps/02_mark_adapters/{sample_name}.bam",
-            tmp = f"../tmp/02_mark_adapters/",
-            done = f"../done/02_mark_adapters/{sample_name}",
-            done_prev = f"../done/01_uBAM_files/{sample_name}"
-            )
-        )
-    gwf.target_from_template(
-        f"{sample_name}_map_reads", 
-        map_reads(
-            infile = f"../steps/02_mark_adapters/{sample_name}.bam",
-            ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
-            outfile = f"../steps/03_mapped_reads/{sample_name}.mapped.bam",
-            tmp = f"../tmp/03_mapped_reads/",
-            done = f"../done/03_mapped_reads/{sample_name}",
-            done_prev = [f"../done/02_mark_adapters/{sample_name}", '../done/00_make_ref_index_and_dict/done']
-            )
-        )
-    gwf.target_from_template(
-        f"{sample_name}_mark_and_remove_duplicates", 
-        mark_and_remove_duplicates(
-            infile = f"../steps/03_mapped_reads/{sample_name}.mapped.bam",
-            intermediate = f"../steps/04_mark_and_remove_duplicates/{sample_name}.mapped.sorted.bam",
-            metrics = f"../steps/04_mark_and_remove_duplicates/{sample_name}.mapped.nodupes.metrics",
-            outfile = f"../steps/04_mark_and_remove_duplicates/{sample_name}.mapped.nodupes.bam",
-            temp = "../tmp/04_mark_and_remove_duplicates/",
-            done = f"../done/04_mark_and_remove_duplicates/{sample_name}",
-            done_prev = f"../done/03_mapped_reads/{sample_name}"
-            )
-        )
-    gwf.target_from_template(
-        f"{sample_name}_sort_coordinates", 
-        sort_coordinates(
-            infile = f"../steps/04_mark_and_remove_duplicates/{sample_name}.mapped.nodupes.bam",
-            outfile = f"../steps/05_sort_coordinates/{sample_name}.mapped.nodupes.sorted.bam",
-            temp = "../tmp/05_sort_coordinates/",
-            done = f"../done/05_sort_coordinates/{sample_name}",
-            done_prev = f"../done/04_mark_and_remove_duplicates/{sample_name}"
-            )
-        )
-    gwf.target_from_template(
-        f"{sample_name}_get_coverage", 
-        get_coverage(
-            infile = f"../steps/05_sort_coordinates/{sample_name}.mapped.nodupes.sorted.bam",
-            outfile = f"../steps/06_get_coverage/{sample_name}",
-            done = f"../done/06_get_coverage/{sample_name}",
-            done_prev = f"../done/05_sort_coordinates/{sample_name}"
-            )
-        )
-    for chr in chr_lst:
+for individual in list(dct.keys()):
+    for sample_name in dct[individual]:
+        if not os.path.exists(f'{path_to_samples}/{sample_name}_1.fastq.gz'): continue
+        if not os.path.exists(f'{path_to_samples}/{sample_name}_2.fastq.gz'): continue
+        # if all(os.path.exists(f"../done/08_call_variants/{sample_name}_{chr}") for chr in chr_lst): continue
+        acc += 1
         gwf.target_from_template(
-            f"{sample_name}_{chr}_call_variants", 
-            call_variants_per_chromosome(
-                chr = chr,
-                ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
-                infile = f"../steps/05_sort_coordinates/{sample_name}.mapped.nodupes.sorted.bam",
-                outfile = f"../steps/08_call_variants/{sample_name}_{chr}.g.vcf.gz",
-                done = f"../done/08_call_variants/{sample_name}_{chr}",
-                done_prev = f"../done/06_get_coverage/{sample_name}"
+            f"{sample_name}_FASTQ_to_uBAM", 
+            FASTQ_to_uBAM(
+                sample_name = sample_name,
+                fastq1 = f'{path_to_samples}/{sample_name}_1.fastq.gz',
+                fastq2 = f'{path_to_samples}/{sample_name}_2.fastq.gz',
+                outfile = f"../steps/01_uBAM_files/{sample_name}.bam",
+                done = f"../done/01_uBAM_files/{sample_name}"
                 )
             )
-    if acc == 3: break
+        gwf.target_from_template(
+            f"{sample_name}_mark_adapters", 
+            mark_adapters(
+                infile = f"../steps/01_uBAM_files/{sample_name}.bam",
+                outfile = f"../steps/02_mark_adapters/{sample_name}.bam",
+                tmp = f"../tmp/02_mark_adapters/",
+                done = f"../done/02_mark_adapters/{sample_name}",
+                done_prev = f"../done/01_uBAM_files/{sample_name}"
+                )
+            )
+        gwf.target_from_template(
+            f"{sample_name}_map_reads", 
+            map_reads(
+                infile = f"../steps/02_mark_adapters/{sample_name}.bam",
+                ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+                outfile = f"../steps/03_mapped_reads/{sample_name}.mapped.bam",
+                tmp = f"../tmp/03_mapped_reads/",
+                done = f"../done/03_mapped_reads/{sample_name}",
+                done_prev = [f"../done/02_mark_adapters/{sample_name}", '../done/00_make_ref_index_and_dict/done']
+                )
+            )
+        
+
+
+        gwf.target_from_template(
+            f"{sample_name}_sort_coordinates", 
+            sort_coordinates(
+                infile = f"../steps/03_mapped_reads/{sample_name}.mapped.bam",
+                outfile = f"../steps/04_sort_coordinates/{sample_name}.mapped.sorted.bam",
+                temp = "../tmp/04_sort_coordinates/",
+                done = f"../done/04_sort_coordinates/{sample_name}",
+                done_prev = f"../done/03_mapped_reads/{sample_name}"
+                )
+            )
+        
+    gwf.target_from_template(
+        f"{individual}_merge_bams", 
+        merge_bams(
+            infile = [f"../steps/04_sort_coordinates/{sample_name}.mapped.sorted.bam" for sample_name in dct[individual]],
+            outfile = f"../steps/05_merge_bams/{individual}.mapped.sorted.bam",
+            done = f"../done/05_merge_bams/{individual}",
+            done_prev = [f"../done/04_sort_coordinates/{sample_name}" for sample_name in dct[individual]]
+            )
+        )
+
+
+    gwf.target_from_template(
+        f"{individual}_mark_and_remove_duplicates", 
+        mark_and_remove_duplicates(
+            infile = f"../steps/05_merge_bams/{individual}.mapped.sorted.bam",
+            intermediate = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.sorted.bam",
+            metrics = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.metrics",
+            outfile = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
+            temp = "../tmp/06_mark_and_remove_duplicates/",
+            done = f"../done/06_mark_and_remove_duplicates/{individual}",
+            done_prev = f"../done/05_merge_bams/{individual}"
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{individual}_get_coverage", 
+        get_coverage(
+            infile = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
+            outfile = f"../steps/07_get_coverage/{individual}",
+            done = f"../done/07_get_coverage/{individual}",
+            done_prev = f"../done/06_mark_and_remove_duplicates/{individual}"
+            )
+        )
+    
+    # for chr in chr_lst:
+    #     gwf.target_from_template(
+    #         f"{sample_name}_{chr}_call_variants", 
+    #         call_variants_per_chromosome(
+    #             chr = chr,
+    #             ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+    #             infile = f"../steps/05_sort_coordinates/{sample_name}.mapped.nodupes.sorted.bam",
+    #             outfile = f"../steps/08_call_variants/{sample_name}_{chr}.g.vcf.gz",
+    #             done = f"../done/08_call_variants/{sample_name}_{chr}",
+    #             done_prev = f"../done/06_get_coverage/{sample_name}"
+    #             )
+    #         )
+    # # if acc == 3: break
     
 
 # for chr in chr_lst:
