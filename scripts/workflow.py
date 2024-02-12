@@ -159,15 +159,26 @@ def merge_bams(infile, outfile, done, done_prev):
 ######################################## ---- MARK AND REMOVE DUPLICATES ---- ##########################################
 ########################################################################################################################
 
-def mark_and_remove_duplicates(infile, intermediate, metrics, outfile, temp, done, done_prev):
+def mark_and_remove_duplicates_old(infile, intermediate, metrics, outfile, temp, done, done_prev):
     """Mark and remove duplicates."""
     inputs = [infile, done_prev]
     outputs = [done, outfile, metrics]
-    options = {'cores': 4, 'memory': '200g', 'walltime': "06:00:00"}
+    options = {'cores': 4, 'memory': '200g', 'walltime': "24:00:00"}
     spec = f"""
         picard SortSam I=$PWD/{infile} O=$PWD/{intermediate} SO=queryname CREATE_INDEX=true TMP_DIR=$PWD/{temp}
         picard MarkDuplicates I=$PWD/{intermediate} M=$PWD/{metrics} O=$PWD/{outfile} REMOVE_DUPLICATES=true CREATE_INDEX=true TMP_DIR=$PWD/{temp}
         rm {intermediate}
+        touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+def mark_and_remove_duplicates(infile, metrics, outfile, temp, done, done_prev):
+    """Mark and remove duplicates."""
+    inputs = [infile, done_prev]
+    outputs = [done, outfile, metrics]
+    options = {'cores': 6, 'memory': '200g', 'walltime': "24:00:00"}
+    spec = f"""
+        picard MarkDuplicates I=$PWD/{infile} M=$PWD/{metrics} O=$PWD/{outfile} REMOVE_DUPLICATES=true CREATE_INDEX=true TMP_DIR=$PWD/{temp}
         touch {done}
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
@@ -292,7 +303,7 @@ study_name = "kuderna_2023"
 path_to_samples = f"../../../../shared_data/sequencing_data/baboon_other_studies/{study_name}"
 
 dct = {}
-n_sample = 2
+n_sample = 3
 acc = 0
 with open(f"../metadata/sample_names_{study_name}.tsv") as file:
     for line in file:
@@ -378,8 +389,7 @@ for individual in list(dct.keys()):
         f"{individual}_mark_and_remove_duplicates", 
         mark_and_remove_duplicates(
             infile = f"../steps/05_merge_bams/{individual}.mapped.sorted.bam",
-            intermediate = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.sorted.bam",
-            metrics = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.metrics",
+            metrics = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam.metrics",
             outfile = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
             temp = "../tmp/06_mark_and_remove_duplicates/",
             done = f"../done/06_mark_and_remove_duplicates/{individual}",
@@ -399,14 +409,14 @@ for individual in list(dct.keys()):
     
     # for chr in chr_lst:
     #     gwf.target_from_template(
-    #         f"{sample_name}_{chr}_call_variants", 
+    #         f"{individual}_{chr}_call_variants", 
     #         call_variants_per_chromosome(
     #             chr = chr,
     #             ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
-    #             infile = f"../steps/05_sort_coordinates/{sample_name}.mapped.nodupes.sorted.bam",
-    #             outfile = f"../steps/08_call_variants/{sample_name}_{chr}.g.vcf.gz",
-    #             done = f"../done/08_call_variants/{sample_name}_{chr}",
-    #             done_prev = f"../done/06_get_coverage/{sample_name}"
+    #             infile = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
+    #             outfile = f"../steps/08_call_variants/{individual}_{chr}.g.vcf.gz",
+    #             done = f"../done/08_call_variants/{individual}_{chr}",
+    #             done_prev = f"../done/07_get_coverage/{individual}"
     #             )
     #         )
     # # if acc == 3: break
