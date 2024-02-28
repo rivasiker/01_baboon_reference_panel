@@ -20,7 +20,8 @@ https://www.ebi.ac.uk/ena/browser/search
 
 Vilgalys_Fogel <- read_tsv('PRJNA755322_Vilgalys_Fogel_2022.txt') 
 
-Vilgalys_Fogel
+Vilgalys_Fogel |> 
+  write_tsv("sample_names_vilgalys_fogel_2022.tsv")
 
 ```
 
@@ -57,7 +58,6 @@ The following 48 IDs were missing, but are found in the latest pull from ENA:
 kuderna_missing <-str_split("PD_0492, PD_0493, PD_0494, PD_0495, PD_0496, PD_0497, PD_0498, PD_0499, PD_0500, PD_0501, PD_0502, PD_0503, PD_0504, PD_0505, PD_0506, PD_0507, PD_0508, PD_0509, PD_0637, PD_0641, PD_0642, PD_0649, PD_0650, PD_0651, PD_0652, PD_0653, PD_0654, PD_0658, PD_0659, PD_0662, PD_0674, PD_0675, PD_0676, PD_0677, PD_0678, PD_0679, PD_0680, PD_0681, PD_0682, PD_0683, PD_0684, PD_0685, PD_0686, PD_0687, PD_0688, PD_0689, PD_0690, PD_0691", ', ') |> unlist()
 
 ```
-
 
 # Robinson et al. 2019
 
@@ -219,6 +219,7 @@ save_lst(Rogers)
 save_lst(Robinson)
 save_lst(Snyder_Mackler)
 save_lst(Wall)
+save_lst(Vilgalys_Fogel)
 
 
 
@@ -239,12 +240,14 @@ save_md5sums(Robinson, 'robinson_2019/')
 save_md5sums(Rogers, 'rogers_2019/')
 save_md5sums(Snyder_Mackler, 'snyder-mackler_2016/')
 save_md5sums(Wall, 'wall_2016/')
+save_md5sums(Vilgalys_Fogel, 'vilgalys_fogel_2022/')
 
 read_delim('kuderna_2023.md5', delim = ' ', col_names = F) |> 
   bind_rows(read_delim('robinson_2019.md5', delim = ' ', col_names = F)) |>
   bind_rows(read_delim('rogers_2019.md5', delim = ' ', col_names = F)) |> 
   bind_rows(read_delim('snyder-mackler_2016.md5', delim = ' ', col_names = F)) |> 
   bind_rows(read_delim('wall_2016.md5', delim = ' ', col_names = F)) |> 
+  bind_rows(read_delim('vilgalys_fogel_2022.md5', delim = ' ', col_names = F)) |> 
   write_delim('myfiles_new.md5', delim = ' ', col_names = FALSE)
 
 ```
