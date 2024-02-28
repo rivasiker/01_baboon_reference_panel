@@ -21,6 +21,14 @@ https://www.ebi.ac.uk/ena/browser/search
 Vilgalys_Fogel <- read_tsv('PRJNA755322_Vilgalys_Fogel_2022.txt') 
 
 Vilgalys_Fogel |> 
+  group_by(scientific_name, sample_alias) |> 
+  summarise(
+    n = n()) |> 
+  group_by(scientific_name) |> 
+  summarise(
+    n = n())
+
+Vilgalys_Fogel |> 
   write_tsv("sample_names_vilgalys_fogel_2022.tsv")
 
 ```
@@ -44,7 +52,11 @@ Kuderna |>
 Kuderna |> 
   group_by(scientific_name, sample_alias) |> 
   summarise(
+    n = n()) |> 
+  group_by(scientific_name) |> 
+  summarise(
     n = n())
+
 
 Kuderna |> 
   write_tsv("sample_names_kuderna_2023.tsv")
@@ -93,6 +105,15 @@ Robinson |>
   filter(sample_alias %in% lst) 
 
 Robinson |> 
+  group_by(scientific_name, sample_alias) |> 
+  summarise(
+    n = n()) |> 
+  group_by(scientific_name) |> 
+  summarise(
+    n = n())
+  
+
+Robinson |> 
   write_tsv("sample_names_robinson_2019.tsv")
 
 ```
@@ -131,6 +152,16 @@ Rogers <- read_tsv('PRJNA251424_Rogers_2019_Theropithecus_gelada.txt', col_types
 
 Rogers |> 
   group_by(scientific_name, sample_alias) |> 
+  summarise(
+    n = n()
+    ) 
+
+Rogers |> 
+  group_by(scientific_name, sample_alias) |> 
+  summarise(
+    n = n()
+    ) |> 
+  group_by(scientific_name) |> 
   summarise(
     n = n()
     ) 
@@ -174,6 +205,14 @@ Snyder_Mackler |>
   filter(sample_alias %in% amb_lst)
 
 Snyder_Mackler |> 
+  group_by(scientific_name, sample_alias) |> 
+  summarise(
+    n = n()) |> 
+  group_by(scientific_name) |> 
+  summarise(
+    n = n())
+
+Snyder_Mackler |> 
   write_tsv("sample_names_snyder-mackler_2016.tsv")
 
 ```
@@ -192,6 +231,16 @@ Wall <- read_tsv('PRJNA308870_Wall_2016.txt') |>
 
 Wall |>
   group_by(scientific_name, sample_alias) |> 
+  summarise(
+    n = n()
+    ) 
+
+Wall |>
+  group_by(scientific_name, sample_alias) |> 
+  summarise(
+    n = n()
+    ) |> 
+  group_by(scientific_name) |> 
   summarise(
     n = n()
     ) 
