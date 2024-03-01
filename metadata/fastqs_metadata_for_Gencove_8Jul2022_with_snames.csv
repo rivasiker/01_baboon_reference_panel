@@ -1,0 +1,627 @@
+id,population,species,sample_type,BioProject,Accession,Notes,Study,sample_alias,sname,study
+AMB_001,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814953,NA,Vilgalys,AMB_001,ABB,vil
+AMB_002,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815138,NA,Vilgalys,AMB_002,ACI,vil
+AMB_003,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815029,NA,Vilgalys,AMB_003,ADD,vil
+AMB_004,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815279,NA,Vilgalys,AMB_004,ADR,vil
+AMB_005,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814964,NA,Vilgalys,AMB_005,AGE,vil
+AMB_006,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815313,NA,Vilgalys,AMB_006,AGG,vil
+AMB_007,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815239,NA,Vilgalys,AMB_007,AGU,vil
+AMB_008,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814941,NA,Vilgalys,AMB_008,ANC,vil
+AMB_009,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814920,NA,Vilgalys,AMB_009,APP,vil
+AMB_010,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814934,NA,Vilgalys,AMB_010,ARS,vil
+AMB_011,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814932,NA,Vilgalys,AMB_011,AUS,vil
+AMB_012,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815307,NA,Vilgalys,AMB_012,BAG,vil
+AMB_013,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815054,NA,Vilgalys,AMB_013,BAT,vil
+AMB_014,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815017,NA,Vilgalys,AMB_014,BIK,vil
+AMB_015,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815051,NA,Vilgalys,AMB_015,BIO,vil
+AMB_016,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815080,NA,Vilgalys,AMB_016,BOL,vil
+AMB_017,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815076,NA,Vilgalys,AMB_017,BUT,vil
+AMB_018,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815253,NA,Vilgalys,AMB_018,CAB,vil
+AMB_019,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815056,NA,Vilgalys,AMB_019,CAC,vil
+AMB_020,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815268,NA,Vilgalys,AMB_020,CAD,vil
+AMB_021,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815180,NA,Vilgalys,AMB_021,CAR,vil
+AMB_022,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815302,NA,Vilgalys,AMB_022,CEL,vil
+AMB_023,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814930,NA,Vilgalys,AMB_023,CON,vil
+AMB_024,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815001,NA,Vilgalys,AMB_024,COO,vil
+AMB_025,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815072,NA,Vilgalys,AMB_025,COT,vil
+AMB_026,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815207,NA,Vilgalys,AMB_026,CUI,vil
+AMB_027,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814908,NA,Vilgalys,AMB_027,DAG,vil
+AMB_028,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815197,NA,Vilgalys,AMB_028,DAS,vil
+AMB_029,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815062,NA,Vilgalys,AMB_029,DED,vil
+AMB_030,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815003,NA,Vilgalys,AMB_030,DEG,vil
+AMB_031,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815189,NA,Vilgalys,AMB_031,DEN,vil
+AMB_032,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815269,NA,Vilgalys,AMB_032,DHO,vil
+AMB_033,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815009,NA,Vilgalys,AMB_033,DIB,vil
+AMB_034,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815205,NA,Vilgalys,AMB_034,DIS,vil
+AMB_035,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815027,NA,Vilgalys,AMB_035,NA,vil
+AMB_036,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814912,NA,Vilgalys,AMB_036,DJI,vil
+AMB_037,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815181,NA,Vilgalys,AMB_037,DOT,vil
+AMB_038,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815251,NA,Vilgalys,AMB_038,DRO,vil
+AMB_039,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814909,NA,Vilgalys,AMB_039,DUB,vil
+AMB_040,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815024,NA,Vilgalys,AMB_040,DUN,vil
+AMB_041,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814962,NA,Vilgalys,AMB_041,DUX,vil
+AMB_042,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815208,NA,Vilgalys,AMB_042,EAG,vil
+AMB_043,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815013,NA,Vilgalys,AMB_043,EAS,vil
+AMB_044,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814922,NA,Vilgalys,AMB_044,ECL,vil
+AMB_045,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815035,NA,Vilgalys,AMB_045,EID,vil
+AMB_046,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815034,NA,Vilgalys,AMB_046,ELA,vil
+AMB_047,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815265,NA,Vilgalys,AMB_047,ELF,vil
+AMB_048,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815045,NA,Vilgalys,AMB_048,ENV,vil
+AMB_049,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814994,NA,Vilgalys,AMB_049,EPI,vil
+AMB_050,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815117,NA,Vilgalys,AMB_050,ERM,vil
+AMB_051,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815043,NA,Vilgalys,AMB_051,EUR,vil
+AMB_052,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814985,NA,Vilgalys,AMB_052,EVA,vil
+AMB_053,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815290,NA,Vilgalys,AMB_053,FAC,vil
+AMB_054,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815057,NA,Vilgalys,AMB_054,FAM,vil
+AMB_055,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815306,NA,Vilgalys,AMB_055,FAT,vil
+AMB_056,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815225,NA,Vilgalys,AMB_056,FAV,vil
+AMB_057,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815155,NA,Vilgalys,AMB_057,FAX,vil
+AMB_058,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814980,NA,Vilgalys,AMB_058,FIL,vil
+AMB_059,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815053,NA,Vilgalys,AMB_059,FLA,vil
+AMB_060,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814966,NA,Vilgalys,AMB_060,FRU,vil
+AMB_061,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815267,NA,Vilgalys,AMB_061,FUM,vil
+AMB_062,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814911,NA,Vilgalys,AMB_062,GAB,vil
+AMB_063,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815050,NA,Vilgalys,AMB_063,GER,vil
+AMB_064,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814925,NA,Vilgalys,AMB_064,GET,vil
+AMB_065,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814907,NA,Vilgalys,AMB_065,GIZ,vil
+AMB_066,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815026,NA,Vilgalys,AMB_066,GLO,vil
+AMB_067,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815231,NA,Vilgalys,AMB_067,HAN,vil
+AMB_068,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814977,NA,Vilgalys,AMB_068,HAV,vil
+AMB_069,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815151,NA,Vilgalys,AMB_069,HEI,vil
+AMB_070,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815186,NA,Vilgalys,AMB_070,HEK,vil
+AMB_071,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815069,NA,Vilgalys,AMB_071,HIA,vil
+AMB_072,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815193,NA,Vilgalys,AMB_072,HIB,vil
+AMB_073,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815206,NA,Vilgalys,AMB_073,HIZ,vil
+AMB_074,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815310,NA,Vilgalys,AMB_074,HNS,vil
+AMB_075,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815109,NA,Vilgalys,AMB_075,HOB,vil
+AMB_076,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814972,NA,Vilgalys,AMB_076,HOK,vil
+AMB_077,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815047,NA,Vilgalys,AMB_077,HUC,vil
+AMB_078,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815199,NA,Vilgalys,AMB_078,HUR,vil
+AMB_079,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814910,NA,Vilgalys,AMB_079,IDI,vil
+AMB_080,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815111,NA,Vilgalys,AMB_080,ILI,vil
+AMB_081,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815297,NA,Vilgalys,AMB_081,INZ,vil
+AMB_082,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815303,NA,Vilgalys,AMB_082,JAG,vil
+AMB_083,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815161,NA,Vilgalys,AMB_083,JIT,vil
+AMB_084,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815101,NA,Vilgalys,AMB_084,KAD,vil
+AMB_085,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815183,NA,Vilgalys,AMB_085,KAT,vil
+AMB_086,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815172,NA,Vilgalys,AMB_086,KES,vil
+AMB_087,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815095,NA,Vilgalys,AMB_087,KIJ,vil
+AMB_088,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815314,NA,Vilgalys,AMB_088,KIM,vil
+AMB_089,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815105,NA,Vilgalys,AMB_089,KIT,vil
+AMB_090,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815142,NA,Vilgalys,AMB_090,KIZ,vil
+AMB_091,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814971,NA,Vilgalys,AMB_091,KNO,vil
+AMB_092,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814913,NA,Vilgalys,AMB_092,KOA,vil
+AMB_093,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815152,NA,Vilgalys,AMB_093,KOL,vil
+AMB_094,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814978,NA,Vilgalys,AMB_094,KOM,vil
+AMB_095,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814968,NA,Vilgalys,AMB_095,KOR,vil
+AMB_096,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815243,NA,Vilgalys,AMB_096,KUP,vil
+AMB_097,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815282,NA,Vilgalys,AMB_097,LAM,vil
+AMB_098,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815201,NA,Vilgalys,AMB_098,LAN,vil
+AMB_099,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815277,NA,Vilgalys,AMB_099,LAO,vil
+AMB_100,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815148,NA,Vilgalys,AMB_100,LAR,vil
+AMB_101,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815158,NA,Vilgalys,AMB_101,LAT,vil
+AMB_102,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815154,NA,Vilgalys,AMB_102,LAU,vil
+AMB_103,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815179,NA,Vilgalys,AMB_103,LAW,vil
+AMB_104,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815113,NA,Vilgalys,AMB_104,LAX,vil
+AMB_105,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815125,NA,Vilgalys,AMB_105,LAZ,vil
+AMB_106,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815169,NA,Vilgalys,AMB_106,LEB,vil
+AMB_107,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815088,NA,Vilgalys,AMB_107,LEC,vil
+AMB_108,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815240,NA,Vilgalys,AMB_108,LEL,vil
+AMB_109,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815326,NA,Vilgalys,AMB_109,LEM,vil
+AMB_110,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815134,NA,Vilgalys,AMB_110,LEO,vil
+AMB_111,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815094,NA,Vilgalys,AMB_111,LIM,vil
+AMB_112,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815174,NA,Vilgalys,AMB_112,LIN,vil
+AMB_113,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815254,NA,Vilgalys,AMB_113,LIW,vil
+AMB_114,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814952,NA,Vilgalys,AMB_114,LIZ,vil
+AMB_115,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815032,NA,Vilgalys,AMB_115,LOB,vil
+AMB_116,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815209,NA,Vilgalys,AMB_116,LOC,vil
+AMB_117,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814987,NA,Vilgalys,AMB_117,LOD,vil
+AMB_118,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815211,NA,Vilgalys,AMB_118,LOF,vil
+AMB_119,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815049,NA,Vilgalys,AMB_119,LOG,vil
+AMB_120,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815289,NA,Vilgalys,AMB_120,LON,vil
+AMB_121,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815084,NA,Vilgalys,AMB_121,LOU,vil
+AMB_122,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814997,NA,Vilgalys,AMB_122,LOX,vil
+AMB_123,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815309,NA,Vilgalys,AMB_123,LOZ,vil
+AMB_124,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815315,NA,Vilgalys,AMB_124,LUD,vil
+AMB_125,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814939,NA,Vilgalys,AMB_125,LUF,vil
+AMB_126,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815296,NA,Vilgalys,AMB_126,LUN,vil
+AMB_127,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815115,NA,Vilgalys,AMB_127,LUO,vil
+AMB_128,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814993,NA,Vilgalys,AMB_128,LUR,vil
+AMB_129,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815065,NA,Vilgalys,AMB_129,LUT,vil
+AMB_130,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815010,NA,Vilgalys,AMB_130,LUV,vil
+AMB_131,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815060,NA,Vilgalys,AMB_131,LUX,vil
+AMB_132,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815000,NA,Vilgalys,AMB_132,LUZ,vil
+AMB_133,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815011,NA,Vilgalys,AMB_133,LYB,vil
+AMB_134,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815216,NA,Vilgalys,AMB_134,LYC,vil
+AMB_135,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814970,NA,Vilgalys,AMB_135,LYE,vil
+AMB_136,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814999,NA,Vilgalys,AMB_136,LYM,vil
+AMB_137,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815294,NA,Vilgalys,AMB_137,MAD,vil
+AMB_138,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814948,NA,Vilgalys,AMB_138,MAH,vil
+AMB_139,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815020,NA,Vilgalys,AMB_139,MBE,vil
+AMB_140,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815202,NA,Vilgalys,AMB_140,MLO,vil
+AMB_141,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815233,NA,Vilgalys,AMB_141,MON,vil
+AMB_142,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815273,NA,Vilgalys,AMB_142,MOR,vil
+AMB_143,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815129,NA,Vilgalys,AMB_143,NAP,vil
+AMB_144,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815086,NA,Vilgalys,AMB_144,NAR,vil
+AMB_145,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814967,NA,Vilgalys,AMB_145,NAW,vil
+AMB_146,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815258,NA,Vilgalys,AMB_146,NAY,vil
+AMB_147,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814988,NA,Vilgalys,AMB_147,NEA,vil
+AMB_148,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815234,NA,Vilgalys,AMB_148,NEE,vil
+AMB_149,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814984,NA,Vilgalys,AMB_149,NEH,vil
+AMB_150,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815058,NA,Vilgalys,AMB_150,NEL,vil
+AMB_151,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815274,NA,Vilgalys,AMB_151,NEP,vil
+AMB_152,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815066,NA,Vilgalys,AMB_152,NA,vil
+AMB_153,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814982,NA,Vilgalys,AMB_153,NET,vil
+AMB_154,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815288,NA,Vilgalys,AMB_154,NGG,vil
+AMB_155,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815118,NA,Vilgalys,AMB_155,NIG,vil
+AMB_156,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815264,NA,Vilgalys,AMB_156,NIP,vil
+AMB_157,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815012,NA,Vilgalys,AMB_157,NIR,vil
+AMB_158,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815176,NA,Vilgalys,AMB_158,NIX,vil
+AMB_159,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815187,NA,Vilgalys,AMB_159,NJU,vil
+AMB_160,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815126,NA,Vilgalys,AMB_160,NOB,vil
+AMB_161,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815184,NA,Vilgalys,AMB_161,NOK,vil
+AMB_162,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815320,NA,Vilgalys,AMB_162,NOL,vil
+AMB_163,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814991,NA,Vilgalys,AMB_163,NOM,vil
+AMB_164,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814981,NA,Vilgalys,AMB_164,NON,vil
+AMB_165,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815124,NA,Vilgalys,AMB_165,NOO,vil
+AMB_166,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815213,NA,Vilgalys,AMB_166,NOP,vil
+AMB_167,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815007,NA,Vilgalys,AMB_167,NOZ,vil
+AMB_168,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815266,NA,Vilgalys,AMB_168,NUG,vil
+AMB_169,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814983,NA,Vilgalys,AMB_169,NUN,vil
+AMB_170,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815145,NA,Vilgalys,AMB_170,NUT,vil
+AMB_171,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815238,NA,Vilgalys,AMB_171,NYA,vil
+AMB_172,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814998,NA,Vilgalys,AMB_172,NYS,vil
+AMB_173,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815122,NA,Vilgalys,AMB_173,NYU,vil
+AMB_174,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815203,NA,Vilgalys,AMB_174,OBI,vil
+AMB_175,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815121,NA,Vilgalys,AMB_175,OBL,vil
+AMB_176,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815087,NA,Vilgalys,AMB_176,OCE,vil
+AMB_177,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815163,NA,Vilgalys,AMB_177,OCT,vil
+AMB_178,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815278,NA,Vilgalys,AMB_178,ODE,vil
+AMB_179,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815244,NA,Vilgalys,AMB_179,OFR,vil
+AMB_180,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815018,NA,Vilgalys,AMB_180,OJU,vil
+AMB_181,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815167,NA,Vilgalys,AMB_181,OMO,vil
+AMB_182,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814992,NA,Vilgalys,AMB_182,OPH,vil
+AMB_183,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815156,NA,Vilgalys,AMB_183,OST,vil
+AMB_184,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815114,NA,Vilgalys,AMB_184,OTI,vil
+AMB_185,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815014,NA,Vilgalys,AMB_185,PAI,vil
+AMB_186,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815073,NA,Vilgalys,AMB_186,PAM,vil
+AMB_187,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815100,NA,Vilgalys,AMB_187,PAS,vil
+AMB_188,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815098,NA,Vilgalys,AMB_188,PEN,vil
+AMB_189,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815235,NA,Vilgalys,AMB_189,PEP,vil
+AMB_190,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815108,NA,Vilgalys,AMB_190,PER,vil
+AMB_191,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815081,NA,Vilgalys,AMB_191,PIT,vil
+AMB_192,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815276,NA,Vilgalys,AMB_192,PLA,vil
+AMB_193,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814958,NA,Vilgalys,AMB_193,POA,vil
+AMB_194,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815041,NA,Vilgalys,AMB_194,POK,vil
+AMB_195,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815286,NA,Vilgalys,AMB_195,POL,vil
+AMB_196,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815204,NA,Vilgalys,AMB_196,POS,vil
+AMB_197,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815135,NA,Vilgalys,AMB_197,PRO,vil
+AMB_198,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815120,NA,Vilgalys,AMB_198,PUR,vil
+AMB_199,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814931,NA,Vilgalys,AMB_199,QUA,vil
+AMB_200,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815250,NA,Vilgalys,AMB_200,RAD,vil
+AMB_201,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814916,NA,Vilgalys,AMB_201,RAJ,vil
+AMB_202,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815283,NA,Vilgalys,AMB_202,RAN,vil
+AMB_203,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814951,NA,Vilgalys,AMB_203,NA,vil
+AMB_204,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815260,NA,Vilgalys,AMB_204,RHO,vil
+AMB_205,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814960,NA,Vilgalys,AMB_205,RIE,vil
+AMB_206,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815097,NA,Vilgalys,AMB_206,RIF,vil
+AMB_207,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815023,NA,Vilgalys,AMB_207,RIK,vil
+AMB_208,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815175,NA,Vilgalys,AMB_208,RUT,vil
+AMB_209,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815160,NA,Vilgalys,AMB_209,RWA,vil
+AMB_210,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815103,NA,Vilgalys,AMB_210,SAD,vil
+AMB_211,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815217,NA,Vilgalys,AMB_211,SAF,vil
+AMB_212,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815321,NA,Vilgalys,AMB_212,SAH,vil
+AMB_213,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815226,NA,Vilgalys,AMB_213,SCE,vil
+AMB_214,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815299,NA,Vilgalys,AMB_214,SCI,vil
+AMB_215,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814924,NA,Vilgalys,AMB_215,SCO,vil
+AMB_216,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815177,NA,Vilgalys,AMB_216,SEZ,vil
+AMB_217,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814935,NA,Vilgalys,AMB_217,SOR,vil
+AMB_218,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815015,NA,Vilgalys,AMB_218,SUE,vil
+AMB_219,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815071,NA,Vilgalys,AMB_219,TAL,vil
+AMB_220,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815112,NA,Vilgalys,AMB_220,TEL,vil
+AMB_221,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814979,NA,Vilgalys,AMB_221,TER,vil
+AMB_222,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815083,NA,Vilgalys,AMB_222,THR,vil
+AMB_223,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814943,NA,Vilgalys,AMB_223,TOR,vil
+AMB_224,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815075,NA,Vilgalys,AMB_224,TUS,vil
+AMB_225,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815107,NA,Vilgalys,AMB_225,TUZ,vil
+AMB_226,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815256,NA,Vilgalys,AMB_226,TYC,vil
+AMB_227,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815305,NA,Vilgalys,AMB_227,UHU,vil
+AMB_228,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814926,NA,Vilgalys,AMB_228,UNY,vil
+AMB_229,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815077,NA,Vilgalys,AMB_229,VAD,vil
+AMB_230,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815311,NA,Vilgalys,AMB_230,NA,vil
+AMB_231,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814944,NA,Vilgalys,AMB_231,VAP,vil
+AMB_232,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815153,NA,Vilgalys,AMB_232,VAZ,vil
+AMB_233,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815002,NA,Vilgalys,AMB_233,VEI,vil
+AMB_234,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815246,NA,Vilgalys,AMB_234,VES,vil
+AMB_235,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815048,NA,Vilgalys,AMB_235,VEX,vil
+AMB_236,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815281,NA,Vilgalys,AMB_236,VIB,vil
+AMB_237,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815300,NA,Vilgalys,AMB_237,VIG,vil
+AMB_238,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814917,NA,Vilgalys,AMB_238,VIN,vil
+AMB_239,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815312,NA,Vilgalys,AMB_239,VIP,vil
+AMB_240,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815287,NA,Vilgalys,AMB_240,VIV,vil
+AMB_241,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815059,NA,Vilgalys,AMB_241,VIY,vil
+AMB_242,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815090,NA,Vilgalys,AMB_242,VOG,vil
+AMB_243,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815036,NA,Vilgalys,AMB_243,VOM,vil
+AMB_244,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815136,NA,Vilgalys,AMB_244,VOR,vil
+AMB_245,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815275,NA,Vilgalys,AMB_245,VOT,vil
+AMB_246,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814954,NA,Vilgalys,AMB_246,VUG,vil
+AMB_247,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815318,NA,Vilgalys,AMB_247,VUM,vil
+AMB_248,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815316,NA,Vilgalys,AMB_248,WAB,vil
+AMB_249,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815319,NA,Vilgalys,AMB_249,WAC,vil
+AMB_250,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815104,NA,Vilgalys,AMB_250,WAD,vil
+AMB_251,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815224,NA,Vilgalys,AMB_251,WAG,vil
+AMB_252,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815091,NA,Vilgalys,AMB_252,WAK,vil
+AMB_253,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815093,NA,Vilgalys,AMB_253,WAL,vil
+AMB_254,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815078,NA,Vilgalys,AMB_254,WAM,vil
+AMB_255,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815031,NA,Vilgalys,AMB_255,WAP,vil
+AMB_256,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815143,NA,Vilgalys,AMB_256,WAS,vil
+AMB_257,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815070,NA,Vilgalys,AMB_257,WEA,vil
+AMB_258,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814996,NA,Vilgalys,AMB_258,WEG,vil
+AMB_259,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814989,NA,Vilgalys,AMB_259,WEI,vil
+AMB_260,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815022,NA,Vilgalys,AMB_260,WER,vil
+AMB_261,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815019,NA,Vilgalys,AMB_261,WEW,vil
+AMB_262,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814969,NA,Vilgalys,AMB_262,WHE,vil
+AMB_263,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815241,NA,Vilgalys,AMB_263,WHI,vil
+AMB_264,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815133,NA,Vilgalys,AMB_264,WIF,vil
+AMB_265,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814990,NA,Vilgalys,AMB_265,WIP,vil
+AMB_266,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815033,NA,Vilgalys,AMB_266,WIR,vil
+AMB_267,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815147,NA,Vilgalys,AMB_267,WIV,vil
+AMB_268,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815194,NA,Vilgalys,AMB_268,WIZ,vil
+AMB_269,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815123,NA,Vilgalys,AMB_269,WOB,vil
+AMB_270,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815130,NA,Vilgalys,AMB_270,WOC,vil
+AMB_271,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814961,NA,Vilgalys,AMB_271,WON,vil
+AMB_272,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815144,NA,Vilgalys,AMB_272,WRI,vil
+AMB_273,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814956,NA,Vilgalys,AMB_273,WYA,vil
+AMB_274,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815293,NA,Vilgalys,AMB_274,WYN,vil
+AMB_275,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815044,NA,Vilgalys,AMB_275,YAB,vil
+AMB_276,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815096,NA,Vilgalys,AMB_276,YAI,vil
+AMB_277,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815102,NA,Vilgalys,AMB_277,YAR,vil
+AMB_278,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815079,NA,Vilgalys,AMB_278,YEL,vil
+AMB_279,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814965,NA,Vilgalys,AMB_279,YOG,vil
+AMB_280,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815040,NA,Vilgalys,AMB_280,YUG,vil
+AMB_281,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814938,NA,Vilgalys,AMB_281,ZAM,vil
+AMB_282,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815025,NA,Vilgalys,AMB_282,ZIM,vil
+AMB_283,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814921,NA,Vilgalys,AMB_283,ZUR,vil
+AMB_284,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815247,NA,Vilgalys,AMB_284,NA,vil
+AMB_285,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815168,NA,Vilgalys,AMB_285,GOD,vil
+AMB_286,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814923,NA,Vilgalys,AMB_286,ATE,vil
+AMB_287,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814914,NA,Vilgalys,AMB_287,ZIZ,vil
+AMB_288,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815237,NA,Vilgalys,AMB_288,NA,vil
+AMB_289,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151893,NA,Wall,AMB_059,HON,wal
+AMB_290,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151894,NA,Wall,AMB_060,NIK,wal
+AMB_291,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151895,NA,Wall,AMB_061,LOL,wal
+AMB_292,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151897,NA,Wall,AMB_062,KER,wal
+AMB_293,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151896,NA,Wall,AMB_063,ELV,wal
+AMB_294,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151898,NA,Wall,AMB_064,OXY,wal
+AMB_295,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151899,NA,Wall,AMB_065,DIX,wal
+AMB_296,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151900,NA,Wall,AMB_066,NGU,wal
+AMB_297,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151901,NA,Wall,AMB_067,PUT,wal
+AMB_298,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151902,NA,Wall,AMB_068,WEM,wal
+AMB_299,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151903,NA,Wall,AMB_069,DON,wal
+AMB_300,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151905,NA,Wall,AMB_071,APO,wal
+AMB_301,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814945,NA,Vilgalys,AMB_301,GAN,vil
+AMB_302,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151907,NA,Wall,AMB_073,HOL,wal
+AMB_303,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151908,NA,Wall,AMB_074,KAG,wal
+AMB_304,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151909,NA,Wall,AMB_075,LUI,wal
+AMB_305,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151910,NA,Wall,AMB_076,VET,wal
+AMB_306,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151911,NA,Wall,AMB_077,ARA,wal
+AMB_307,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151912,NA,Wall,AMB_078,GAM,wal
+AMB_308,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151913,NA,Wall,AMB_079,YOK,wal
+AMB_309,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA308870,SRR3151914,NA,Wall,AMB_080,WOL,wal
+AMB_310,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA295782,SRR2565912;SRR2650000;SRR2650075,NA,Snyder,LIT_gDNA,LIT,sny
+AMB_311,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA295782,SRR2565914,NA,Snyder,HAP_gDNA,HAP,sny
+AMB_312,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815227,NA,Vilgalys,AMB_312,KEL,vil
+AMB_313,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815325,NA,Vilgalys,AMB_313,CHE,vil
+AMB_314,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815322,NA,Vilgalys,AMB_314,HYM,vil
+AMB_315,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814919,NA,Vilgalys,AMB_315,ALE,vil
+AMB_316,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815324,NA,Vilgalys,AMB_316,LIB,vil
+AMB_317,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814949,NA,Vilgalys,AMB_317,VOY,vil
+AMB_318,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815323,NA,Vilgalys,AMB_318,WEN,vil
+AMB_319,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815085,NA,Vilgalys,AMB_319,KUK,vil
+AMB_320,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814976,NA,Vilgalys,AMB_320,WAU,vil
+AMB_321,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815063,NA,Vilgalys,AMB_321,DOH,vil
+AMB_322,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815291,NA,Vilgalys,AMB_322,DIV,vil
+AMB_323,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815021,NA,Vilgalys,AMB_323,IDA,vil
+AMB_324,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815245,NA,Vilgalys,AMB_324,NA,vil
+AMB_325,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815304,NA,Vilgalys,AMB_325,MIM,vil
+AMB_326,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815110,NA,Vilgalys,AMB_326,KOB,vil
+AMB_327,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815061,NA,Vilgalys,AMB_327,WOE,vil
+AMB_328,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815301,NA,Vilgalys,AMB_328,NA,vil
+AMB_329,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814937,NA,Vilgalys,AMB_329,KAF,vil
+AMB_330,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815082,NA,Vilgalys,AMB_330,KWA,vil
+AMB_331,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815295,NA,Vilgalys,AMB_331,BOG,vil
+AMB_332,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815196,NA,Vilgalys,AMB_332,THU,vil
+AMB_333,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815005,NA,Vilgalys,AMB_333,DIC,vil
+AMB_334,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815166,NA,Vilgalys,AMB_334,NOV,vil
+AMB_335,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815173,NA,Vilgalys,AMB_335,JES,vil
+AMB_336,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815008,NA,Vilgalys,AMB_336,CAI,vil
+AMB_337,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815230,NA,Vilgalys,AMB_337,LAV,vil
+AMB_338,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815042,NA,Vilgalys,AMB_338,DOJ,vil
+AMB_339,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815285,NA,Vilgalys,AMB_339,RAH,vil
+AMB_340,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815249,NA,Vilgalys,AMB_340,OAT,vil
+AMB_341,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815280,NA,Vilgalys,AMB_341,NZI,vil
+AMB_342,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815052,NA,Vilgalys,AMB_342,RWI,vil
+AMB_343,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815272,NA,Vilgalys,AMB_343,JUH,vil
+AMB_344,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814963,NA,Vilgalys,AMB_344,GUF,vil
+AMB_345,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815182,NA,Vilgalys,AMB_345,MEL,vil
+AMB_346,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815308,NA,Vilgalys,AMB_346,MUS,vil
+AMB_347,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815178,NA,Vilgalys,AMB_347,MAT,vil
+AMB_348,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814942,NA,Vilgalys,AMB_348,GUR,vil
+AMB_349,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815228,NA,Vilgalys,AMB_349,NYM,vil
+AMB_350,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815039,NA,Vilgalys,AMB_350,EMI,vil
+AMB_351,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815140,NA,Vilgalys,AMB_351,LUK,vil
+AMB_352,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815092,NA,Vilgalys,AMB_352,LAS,vil
+AMB_353,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814947,NA,Vilgalys,AMB_353,DAO,vil
+AMB_354,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815192,NA,Vilgalys,AMB_354,U05,vil
+AMB_355,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815188,NA,Vilgalys,AMB_355,UJI,vil
+AMB_356,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815046,NA,Vilgalys,AMB_356,FAU,vil
+AMB_357,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814915,NA,Vilgalys,AMB_357,LUS,vil
+AMB_358,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815028,NA,Vilgalys,AMB_358,LIX,vil
+AMB_359,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815210,NA,Vilgalys,AMB_359,REG,vil
+AMB_360,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815292,NA,Vilgalys,AMB_360,BWA,vil
+AMB_361,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815171,NA,Vilgalys,AMB_361,EKE,vil
+AMB_362,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815284,NA,Vilgalys,AMB_362,JAZ,vil
+AMB_363,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815261,NA,Vilgalys,AMB_363,UBA,vil
+AMB_364,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814936,NA,Vilgalys,AMB_364,NA,vil
+AMB_365,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815229,NA,Vilgalys,AMB_365,MEN,vil
+AMB_366,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815271,NA,Vilgalys,AMB_366,AMO,vil
+AMB_367,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815185,NA,Vilgalys,AMB_367,NA,vil
+AMB_368,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815149,NA,Vilgalys,AMB_368,UDI,vil
+AMB_369,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814973,NA,Vilgalys,AMB_369,RIS,vil
+AMB_370,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815128,NA,Vilgalys,AMB_370,DIR,vil
+AMB_371,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815214,NA,Vilgalys,AMB_371,NOD,vil
+AMB_372,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814974,NA,Vilgalys,AMB_372,KIW,vil
+AMB_373,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814927,NA,Vilgalys,AMB_373,DID,vil
+AMB_374,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814946,NA,Vilgalys,AMB_374,DRI,vil
+AMB_375,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814995,NA,Vilgalys,AMB_375,EDG,vil
+AMB_376,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815068,NA,Vilgalys,AMB_376,KUZ,vil
+AMB_377,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815221,NA,Vilgalys,AMB_377,DUK,vil
+AMB_378,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815270,NA,Vilgalys,AMB_378,NDI,vil
+AMB_379,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815242,NA,Vilgalys,AMB_379,VEC,vil
+AMB_380,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815236,NA,Vilgalys,AMB_380,DAV,vil
+AMB_381,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815220,NA,Vilgalys,AMB_381,DOL,vil
+AMB_382,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815298,NA,Vilgalys,AMB_382,JOY,vil
+AMB_383,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815198,NA,Vilgalys,AMB_383,ULT,vil
+AMB_384,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815016,NA,Vilgalys,AMB_384,IGU,vil
+AMB_385,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815159,NA,Vilgalys,AMB_385,PUM,vil
+AMB_386,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815218,NA,Vilgalys,AMB_386,JUP,vil
+AMB_387,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815317,NA,Vilgalys,AMB_387,MIT,vil
+AMB_388,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815067,NA,Vilgalys,AMB_388,USA,vil
+AMB_389,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814940,NA,Vilgalys,AMB_389,AKE,vil
+AMB_390,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814928,NA,Vilgalys,AMB_390,EQU,vil
+AMB_391,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815006,NA,Vilgalys,AMB_391,HAG,vil
+AMB_392,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815248,NA,Vilgalys,AMB_392,WAN,vil
+AMB_393,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815219,NA,Vilgalys,AMB_393,NA,vil
+AMB_394,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815257,NA,Vilgalys,AMB_394,BIN,vil
+AMB_395,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815139,NA,Vilgalys,AMB_395,NUR,vil
+AMB_396,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815255,NA,Vilgalys,AMB_396,MWE,vil
+AMB_397,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815004,NA,Vilgalys,AMB_397,AXE,vil
+AMB_398,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815119,NA,Vilgalys,AMB_398,MSW,vil
+AMB_399,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815190,NA,Vilgalys,AMB_399,NA,vil
+AMB_400,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815222,NA,Vilgalys,AMB_400,JER,vil
+AMB_401,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815030,NA,Vilgalys,AMB_401,CEN,vil
+AMB_402,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814918,NA,Vilgalys,AMB_402,YEN,vil
+AMB_403,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815064,NA,Vilgalys,AMB_403,RIG,vil
+AMB_404,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815223,NA,Vilgalys,AMB_404,MLI,vil
+AMB_405,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815055,NA,Vilgalys,AMB_405,WOD,vil
+AMB_406,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815191,NA,Vilgalys,AMB_406,DAD,vil
+AMB_407,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815252,NA,Vilgalys,AMB_407,JAD,vil
+AMB_408,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815141,NA,Vilgalys,AMB_408,NIY,vil
+AMB_409,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815127,NA,Vilgalys,AMB_409,TAM,vil
+AMB_410,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815037,NA,Vilgalys,AMB_410,YED,vil
+AMB_411,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815074,NA,Vilgalys,AMB_411,VAK,vil
+AMB_412,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814957,NA,Vilgalys,AMB_412,NTA,vil
+AMB_413,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815089,NA,Vilgalys,AMB_413,TAY,vil
+AMB_414,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814950,NA,Vilgalys,AMB_414,TRU,vil
+AMB_415,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814929,NA,Vilgalys,AMB_415,WUA,vil
+AMB_416,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815212,NA,Vilgalys,AMB_416,UMB,vil
+AMB_417,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815232,NA,Vilgalys,AMB_417,U04,vil
+AMB_418,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815116,NA,Vilgalys,AMB_418,FAB,vil
+AMB_419,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814986,NA,Vilgalys,AMB_419,DUV,vil
+AMB_420,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814975,NA,Vilgalys,AMB_420,WEY,vil
+AMB_421,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815259,NA,Vilgalys,AMB_421,ROY,vil
+AMB_422,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814959,NA,Vilgalys,AMB_422,PUP,vil
+AMB_423,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815150,NA,Vilgalys,AMB_423,ZID,vil
+AMB_424,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815262,NA,Vilgalys,AMB_424,RIT,vil
+AMB_425,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815146,NA,Vilgalys,AMB_425,KAK,vil
+AMB_426,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815099,NA,Vilgalys,AMB_426,ACC,vil
+AMB_427,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814955,NA,Vilgalys,AMB_427,RAF,vil
+AMB_428,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20814933,NA,Vilgalys,AMB_428,YAY,vil
+AMB_429,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815195,NA,Vilgalys,AMB_429,UTO,vil
+AMB_430,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815215,NA,Vilgalys,AMB_430,JEW,vil
+AMB_431,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815170,NA,Vilgalys,AMB_431,DAZ,vil
+AMB_432,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815038,NA,Vilgalys,AMB_432,RUN,vil
+AMB_433,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815137,NA,Vilgalys,AMB_433,MOL,vil
+AMB_434,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815165,NA,Vilgalys,AMB_434,DAN,vil
+AMB_435,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815263,NA,Vilgalys,AMB_435,JUU,vil
+AMB_436,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815106,NA,Vilgalys,AMB_436,KUS,vil
+AMB_437,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815132,NA,Vilgalys,AMB_437,DAI,vil
+AMB_438,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815157,NA,Vilgalys,AMB_438,UNG,vil
+AMB_439,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815164,NA,Vilgalys,AMB_439,TAI,vil
+AMB_440,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815200,NA,Vilgalys,AMB_440,BET,vil
+AMB_441,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815162,NA,Vilgalys,AMB_441,ROS,vil
+AMB_442,Amboseli,yellow_anubis_hybrid,high_quality_tissue,PRJNA755322,SAMN20815131,NA,Vilgalys,AMB_442,DAC,vil
+MAS_001,Maasai_Mara,anubis,high_quality_tissue,PRJNA308870,SRR3151921,NA,Wall,NA,NA,wal
+MAS_002,Maasai_Mara,anubis,high_quality_tissue,PRJNA308870,SRR3151922,NA,Wall,NA,NA,wal
+MAS_003,Maasai_Mara,anubis,high_quality_tissue,PRJNA308870,SRR3151923,NA,Wall,NA,NA,wal
+MAS_004,Maasai_Mara,anubis,high_quality_tissue,PRJNA308870,SRR3151924,NA,Wall,NA,NA,wal
+MAS_005,Maasai_Mara,anubis,high_quality_tissue,PRJNA308870,SRR3151925,NA,Wall,NA,NA,wal
+MAS_006,Maasai_Mara,anubis,high_quality_tissue,PRJNA308870,SRR3151926,NA,Wall,NA,NA,wal
+MAS_007,Maasai_Mara,anubis,high_quality_tissue,PRJNA308870,SRR3151927,NA,Wall,NA,NA,wal
+MIK_001,Mikumi,yellow,high_quality_tissue,PRJNA308870,SRR3151928,NA,Wall,NA,NA,wal
+MIK_002,Mikumi,yellow,high_quality_tissue,PRJNA308870,SRR3151929,NA,Wall,NA,NA,wal
+MIK_003,Mikumi,yellow,high_quality_tissue,PRJNA308870,SRR3151930,NA,Wall,NA,NA,wal
+MIK_004,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814897,NA,Vilgalys,MIK_004,NA,vil
+MIK_005,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814898,NA,Vilgalys,MIK_005,NA,vil
+MIK_006,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814899,NA,Vilgalys,MIK_006,NA,vil
+MIK_007,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814900,NA,Vilgalys,MIK_007,NA,vil
+MIK_008,Mikumi,yellow,high_quality_tissue,PRJNA308870,SRR3151935,NA,Wall,NA,NA,wal
+MIK_009,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814901,NA,Vilgalys,MIK_009,NA,vil
+MIK_010,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814902,NA,Vilgalys,MIK_010,NA,vil
+MIK_011,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814903,NA,Vilgalys,MIK_011,NA,vil
+MIK_012,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814904,NA,Vilgalys,MIK_012,NA,vil
+MIK_013,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814905,NA,Vilgalys,MIK_013,NA,vil
+MIK_014,Mikumi,yellow,high_quality_tissue,PRJNA755322,SAMN20814906,NA,Vilgalys,MIK_014,NA,vil
+WNP_001,WNPRC,anubis,high_quality_tissue,PRJNA308870,SRR3151915,NA,Wall,NA,NA,wal
+WNP_002,WNPRC,anubis,high_quality_tissue,PRJNA308870,SRR3151916,NA,Wall,NA,NA,wal
+WNP_003,WNPRC,anubis,high_quality_tissue,PRJNA308870,SRR3151917,NA,Wall,NA,NA,wal
+WNP_004,WNPRC,anubis,high_quality_tissue,PRJNA308870,SRR3151918,NA,Wall,NA,NA,wal
+WNP_005,WNPRC,anubis,high_quality_tissue,PRJNA308870,SRR3151919,NA,Wall,NA,NA,wal
+WNP_006,WNPRC,anubis,high_quality_tissue,PRJNA308870,SRR3151920,NA,Wall,NA,NA,wal
+1_1979,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285766,NA,Robinson,NA,NA,NA
+1_3548,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433868,SRR8285731,NA,Robinson,NA,NA,NA
+1X0014,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285765,NA,Robinson,NA,NA,NA
+1X0026,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285721,NA,Robinson,NA,NA,NA
+1X0035,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285748,NA,Robinson,NA,NA,NA
+1X0102,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433868,SRR8285751,NA,Robinson,NA,NA,NA
+1X0110,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433868,SRR8285726,NA,Robinson,NA,NA,NA
+1X0153,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285749,NA,Robinson,NA,NA,NA
+1X0576,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285730,NA,Robinson,NA,NA,NA
+1X0580,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285763,NA,Robinson,NA,NA,NA
+1X0808,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285767,NA,Robinson,NA,NA,NA
+1X0832,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285722,NA,Robinson,NA,NA,NA
+1X0951,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285764,NA,Robinson,NA,NA,NA
+1X1032,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285723,NA,Robinson,NA,NA,NA
+1X1125,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8723580,NA,Robinson,NA,NA,NA
+1X1126,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285768;SRR8285734,NA,Robinson,NA,NA,NA
+1X1146,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285724,NA,Robinson,NA,NA,NA
+1X1152,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285735,NA,Robinson,NA,NA,NA
+1X1181,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8723583,NA,Robinson,NA,NA,NA
+1X1672,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285720,NA,Robinson,NA,NA,NA
+1X1700,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8723582,NA,Robinson,NA,NA,NA
+1X1734,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433868,SRR8285733,NA,Robinson,NA,NA,NA
+1X1765,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR7639477;SRR7639464,NA,Robinson,NA,NA,NA
+1X1939,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285736,NA,Robinson,NA,NA,NA
+1X1947,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285725,NA,Robinson,NA,NA,NA
+1X2049,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433868,SRR8285729,NA,Robinson,NA,NA,NA
+1X2208,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433868,SRR8285732,NA,Robinson,NA,NA,NA
+1X2304,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433868,SRR8285728,NA,Robinson,NA,NA,NA
+1X2891,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285754,NA,Robinson,NA,NA,NA
+1X3162,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285753,NA,Robinson,NA,NA,NA
+1X3576,SNPRC_founder_anubis,anubis,high_quality_tissue,PRJNA433868,SRR8285727,NA,Robinson,NA,NA,NA
+30877,Aberdares,anubis,high_quality_tissue,PRJNA54005,SRR1706223;SRR1706224;SRR1767312;SRR1648937;SRR1648938;SRR1648939;SRR1648940,NA,Rogers,NA,NA,NA
+30977,Aberdares,anubis,high_quality_tissue,PRJNA54005,SRR1703318;SRR1754714;SRR1648316;SRR1648317,NA,Rogers,NA,NA,NA
+L142,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA54005,SRR1515159;SRR1515160;SRR1515161;SRR1515162;SRR1700527;SRR1700528,NA,Rogers,NA,NA,NA
+LIV5,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA54005,SRR1700532;SRR1700533;SRR1516196;SRR1516197;SRR1516198;SRR1516199,NA,Rogers,NA,NA,NA
+16066,Mikumi,yellow,high_quality_tissue,PRJNA54007,SRR1513473;SRR1513474;SRR1513475;SRR1513476;SRR1513477;SRR1513478;SRR1513479,NA,Rogers,NA,NA,NA
+6716,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433868,SRR7624578,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+7091,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433869,SRR7588759,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+7158,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433870,SRR7588766,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+7937,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433871,SRR7624575,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+8170,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433872,SRR7624576,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+8344,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433873,SRR7588765,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+8465,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433874,SRR7588764,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+8653,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433875,SRR7588763,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+8780,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433876,SRR7624579,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+9562,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433877,SRR7624580,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+9656,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433878,SRR7624592,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+9841,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433879,SRR8723575;SRR8723574;SRR8723573;SRR8723572;SRR8723571;SRR8723570;SRR8723569;SRR8723568;SRR8723567,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+9860,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433880,SRR7624591,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+10173,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433881,SRR8723601;SRR8723600;SRR8723599;SRR8723598;SRR8723597;SRR8723596;SRR8723595;SRR8723594;SRR8723593;SRR8723592,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+10192,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433882,SRR7624582,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+10349,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433883,SRR7624581,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+10488,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433884,SRR7624584,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+11887,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433885,SRR7588769,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+12242,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433886,SRR8723564;SRR8723553;SRR8723551;SRR8723550;SRR8723549;SRR8723548;SRR8723547;SRR8723545;SRR8723544;SRR8723543,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+13245,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433887,SRR7588767,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+13644,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433888,SRR6710899;SRR7588768,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14022,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433889,SRR7624586,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14182,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433890,SRR7624585,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14276,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433891,SRR7588774;SRR7588771,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14460,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433892,SRR7624588,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14652,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433893,SRR7588772,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14712,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433894,SRR7588775,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14925,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433895,SRR7624587,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14930,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433896,SRR7624590,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+14959,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433897,SRR7588776,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15009,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433898,SRR7588779,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15107,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433899,SRR7588780,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15150,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433900,SRR7588777,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15156,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433901,SRR7624589,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15190,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433902,SRR7588778,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15197,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433903,SRR7624598,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15421,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433904,SRR7588783,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15444,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433905,SRR7639485;SRR7693040;SRR7693041;SRR7698981;SRR7656061;SRR7639484;SRR7639481,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15467,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433906,SRR7588784,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15626,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433907,SRR7588781,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15628,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433908,SRR7624597,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+15633,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433909,SRR7624596,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+16413,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433910,SRR7639489;SRR7639483,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+16517,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433911,SRR7639488;SRR7639487;SRR7639486,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+17199,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433912,SRR7639479;SRR7656071;SRR7656072;SRR7656073;SRR7639478;SRR7639467,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+18385,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433913,SRR8723591;SRR8723590;SRR8723581;SRR8723579;SRR8723578;SRR8723577;SRR8723576;SRR8723563,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+18929,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433914,SRR7624595,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+19181,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433915,SRR7639469;SRR7639468;SRR7639466;SRR7656098;SRR7656099;SRR7656100,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+19207,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433916,SRR7624602,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+19348,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433917,SRR7639473;SRR7639471;SRR7639470,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+25347,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433918,SRR7624573,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+26196,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433919,SRR7624574,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+26988,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433920,SRR8723562;SRR8723561;SRR8723560;SRR8723559;SRR8723558;SRR8723557;SRR8723556;SRR8723555,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+27351,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433921,SRR7624571,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+28246,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433922,SRR8723589;SRR8723588;SRR8723587;SRR8723586;SRR8723585;SRR8723584;SRR8723566;SRR8723565;SRR8723554;SRR8723552;SRR8723546,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+28279,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433923,SRR7624572;SRR8285741,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+28635,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433924,SRR7624577;SRR8285742,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X2231,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433925,SRR7624601,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X2816,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433926,SRR7588785;SRR7588782,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X3697,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433927,SRR7588786,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X3796,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433928,SRR7624600,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X3822,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433929,SRR7588762,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X3837,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433930,SRR7588761,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X4179,SNPRC_nonfounder,anubis,high_quality_tissue,PRJNA433931,SRR7624599,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X4209,SNPRC_nonfounder,Unknown,high_quality_tissue,PRJNA433932,SRR7624594,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X4777,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433933,SRR7588760,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X4853,SNPRC_nonfounder,yellow_anubis_hybrid,high_quality_tissue,PRJNA433934,SRR7624593,species assignment is based on a priori status from colony records; may not match genomic ancestry designation,Rogers,NA,NA,NA
+1X0812,SNPRC_founder,Unknown,high_quality_tissue,PRJNA433935,SRR8285747,NA,Rogers,NA,NA,NA
+1X4384,SNPRC_founder_yellow,yellow,high_quality_tissue,PRJNA433936,SRR8285752,NA,Rogers,NA,NA,NA
+AMB_310,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565911;SRR2566816,"id has been changed so that it is consistent with ids from BioProject PRJNA755322; SRR2566816 is 50bp, SRR2565911is 100 bp, single-end data",Snyder,LIT_fDNA,LIT,sny
+AMB_311,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565913,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,HAP_fDNA,HAP,sny
+AMB_082,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565851,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_001,JAG,sny
+AMB_114,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565852,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_002,LIZ,sny
+AMB_239,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565853,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_003,VIP,sny
+AMB_257,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565854,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_004,WEA,sny
+AMB_443,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565855,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_005,PEC,sny
+AMB_444,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565856,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_006,DEA,sny
+AMB_445,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565857,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_007,PEB,sny
+AMB_317,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565858,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_008,VOY,sny
+AMB_446,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565859,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_009,WAW,sny
+AMB_447,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565860,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_010,AMA,sny
+AMB_308,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565861,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_011,YOK,sny
+AMB_448,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565862,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_012,WRY,sny
+AMB_283,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565863,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_013,ZUR,sny
+AMB_293,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565864,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_014,ELV,sny
+AMB_449,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565865,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_015,GYP,sny
+AMB_450,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565866,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_016,WOK,sny
+AMB_121,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565867,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_017,LOU,sny
+AMB_274,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565868,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_018,WYN,sny
+AMB_260,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565869,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_019,WER,sny
+AMB_309,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565870,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_020,WOL,sny
+AMB_105,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565871,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_021,LAZ,sny
+AMB_451,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565872,"id has been changed so that it is consistent with ids from BioProject PRJNA755344; identity is unclear - originally labeled as AMB_238, but based on microsat data, likely a sample from AMB_140; single-end data",Snyder,AMB_022,NA,sny
+AMB_452,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565873,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_023,ISR,sny
+AMB_453,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565874,id has been changed so that it is consistent with ids from BioProject PRJNA755322; single-end data,Snyder,AMB_024,BEA,sny
+AMB_454,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565875,id has been changed so that it is consistent with ids from BioProject PRJNA755347,Snyder,AMB_025,GOS,sny
+AMB_455,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565876,id has been changed so that it is consistent with ids from BioProject PRJNA755348,Snyder,AMB_026,BOT,sny
+AMB_123,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565877,id has been changed so that it is consistent with ids from BioProject PRJNA755349,Snyder,AMB_027,LOZ,sny
+AMB_456,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565878,id has been changed so that it is consistent with ids from BioProject PRJNA755350,Snyder,AMB_028,NGA,sny
+AMB_184,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565879,id has been changed so that it is consistent with ids from BioProject PRJNA755351,Snyder,AMB_029,OTI,sny
+AMB_014,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565880,id has been changed so that it is consistent with ids from BioProject PRJNA755352,Snyder,AMB_030,BIK,sny
+AMB_015,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565881,id has been changed so that it is consistent with ids from BioProject PRJNA755353,Snyder,AMB_031,BIO,sny
+AMB_457,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565882,id has been changed so that it is consistent with ids from BioProject PRJNA755354,Snyder,AMB_032,LOS,sny
+AMB_127,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565883,id has been changed so that it is consistent with ids from BioProject PRJNA755355,Snyder,AMB_033,LUO,sny
+AMB_458,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565884,id has been changed so that it is consistent with ids from BioProject PRJNA755356,Snyder,AMB_034,BOC,sny
+AMB_107,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565885,id has been changed so that it is consistent with ids from BioProject PRJNA755357,Snyder,AMB_035,LEC,sny
+AMB_118,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565886,id has been changed so that it is consistent with ids from BioProject PRJNA755358,Snyder,AMB_036,LOF,sny
+AMB_111,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565887,id has been changed so that it is consistent with ids from BioProject PRJNA755359,Snyder,AMB_037,LIM,sny
+AMB_282,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565888,id has been changed so that it is consistent with ids from BioProject PRJNA755360,Snyder,AMB_038,ZIM,sny
+AMB_106,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565889,id has been changed so that it is consistent with ids from BioProject PRJNA755361,Snyder,AMB_039,LEB,sny
+AMB_274,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565890,id has been changed so that it is consistent with ids from BioProject PRJNA755362,Snyder,AMB_040,WYN,sny
+AMB_459,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565892,id has been changed so that it is consistent with ids from BioProject PRJNA755364,Snyder,AMB_042,BUR,sny
+AMB_261,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565894,id has been changed so that it is consistent with ids from BioProject PRJNA755366,Snyder,AMB_044,WEW,sny
+AMB_460,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565895,id has been changed so that it is consistent with ids from BioProject PRJNA755367,Snyder,AMB_045,WUM,sny
+AMB_461,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565896,id has been changed so that it is consistent with ids from BioProject PRJNA755368,Snyder,AMB_046,WYO,sny
+AMB_272,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565897,id has been changed so that it is consistent with ids from BioProject PRJNA755369,Snyder,AMB_047,WRI,sny
+AMB_255,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565898,id has been changed so that it is consistent with ids from BioProject PRJNA755370,Snyder,AMB_048,WAP,sny
+AMB_254,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565899,id has been changed so that it is consistent with ids from BioProject PRJNA755371,Snyder,AMB_049,WAM,sny
+AMB_462,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565900,id has been changed so that it is consistent with ids from BioProject PRJNA755372,Snyder,AMB_050,PUY,sny
+AMB_463,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565901,id has been changed so that it is consistent with ids from BioProject PRJNA755373,Snyder,AMB_051,BUL,sny
+AMB_258,Amboseli,yellow_anubis_hybrid,low_quality_fecal,PRJNA295782,SRR2565902,id has been changed so that it is consistent with ids from BioProject PRJNA755374,Snyder,AMB_052,WEG,sny
