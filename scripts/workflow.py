@@ -36,14 +36,15 @@ def download_reference(accession, name, outfile):
 #         )
 #     )
 
-gwf.target_from_template(
-    f"download_reference", 
-    download_reference(
-        accession = 'GCF_008728515.1',
-        name = 'Panubis1.0',
-        outfile = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna.gz"
+if not os.path.exists("../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna.gz"):
+    gwf.target_from_template(
+        f"download_reference", 
+        download_reference(
+            accession = 'GCF_008728515.1',
+            name = 'Panubis1.0',
+            outfile = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna.gz"
+            )
         )
-    )
 
 #############################################################################################################################
 ################################################# ---- MAKE REF INDEX ---- ##################################################
@@ -58,7 +59,7 @@ def make_ref_index_and_dict(infile, done):
     """Make index and dictionary for reference file."""
     inputs = [infile]
     outputs = [done] + [infile.replace('.fna', '.dict')] + [infile+'.'+i for i in ['amb', 'ann', 'bwt', 'fai', 'pac', 'sa']]
-    options = {'cores': 1, 'memory': '20g', 'walltime': "02:00:00"}
+    options = {'cores': 1, 'memory': '20g', 'walltime': "06:00:00"}
     spec = f"""
         /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk CreateSequenceDictionary -R {infile}
         bwa index -a bwtsw {infile}
@@ -67,25 +68,26 @@ def make_ref_index_and_dict(infile, done):
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
 
-gwf.target_from_template(
-    f"make_ref_index_and_dict", 
-    make_ref_index_and_dict(
-        infile = '../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna',
-        done = f"../done/00_make_ref_index_and_dict/done"
+if not os.path.exists("../done/00_make_ref_index_and_dict/done"):
+    gwf.target_from_template(
+        f"make_ref_index_and_dict", 
+        make_ref_index_and_dict(
+            infile = '../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna',
+            done = f"../done/00_make_ref_index_and_dict/done"
+            )
         )
-    )
 
 ########################################################################################################################
 ################################################# ---- MAKE uBAM ---- ##################################################
 ########################################################################################################################
 
-def FASTQ_to_uBAM(sample_name, fastq1, fastq2, outfile, done):
+def FASTQ_to_uBAM(sample_name, fastq1, fastq2, outfile, done, tmp):
     """Make uBAM file from FASTQ file"""
     inputs = [fastq1, fastq2]
     outputs = [done, outfile]
-    options = {'cores': 1, 'memory': '20g', 'walltime': "01:00:00"}
+    options = {'cores': 1, 'memory': '40g', 'walltime': "24:00:00"}
     spec = f"""
-        picard FastqToSam F1=$PWD/{fastq1} F2=$PWD/{fastq2} O=$PWD/{outfile} SAMPLE_NAME={sample_name}
+        picard FastqToSam F1=$PWD/{fastq1} F2=$PWD/{fastq2} O=$PWD/{outfile} SAMPLE_NAME={sample_name} TMP_DIR=$PWD/{tmp}
         touch {done}
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
@@ -98,7 +100,7 @@ def mark_adapters(infile, outfile, tmp, done, done_prev):
     """Mark adapter sequences in uBAM file."""
     inputs = [infile, done_prev]
     outputs = [done, outfile, outfile+'_metrics']
-    options = {'cores': 1, 'memory': '20g', 'walltime': "01:00:00"}
+    options = {'cores': 1, 'memory': '20g', 'walltime': "08:00:00"}
     spec = f"""
         picard MarkIlluminaAdapters I=$PWD/{infile} O=$PWD/{outfile} M=$PWD/{outfile+'_metrics'} TMP_DIR=$PWD/{tmp}
         touch {done}
@@ -114,11 +116,11 @@ def map_reads(infile, ref, outfile, tmp, done, done_prev):
     """Mapping pipe."""
     inputs = done_prev + [ref, infile]
     outputs = [done, outfile]
-    options = {'cores': 4, 'memory': '40g', 'walltime': "12:00:00"}
+    options = {'cores': 16, 'memory': '30g', 'walltime': "UNLIMITED"}
     spec = f"""
         set -o pipefail
         picard SamToFastq I=$PWD/{infile} FASTQ=/dev/stdout INTERLEAVE=true TMP_DIR=$PWD/{tmp} | \
-        bwa mem -M -t 4 -p $PWD/{ref} /dev/stdin | \
+        bwa mem -M -t 16 -p $PWD/{ref} /dev/stdin | \
         picard MergeBamAlignment ALIGNED_BAM=/dev/stdin UNMAPPED_BAM=$PWD/{infile} OUTPUT=$PWD/{outfile} R=$PWD/{ref} TMP_DIR=$PWD/{tmp}
         touch {done}
     """
@@ -132,7 +134,7 @@ def sort_coordinates(infile, outfile, temp, done, done_prev):
     """Sort bam file by coordinate."""
     inputs = [infile, done_prev]
     outputs = [done, outfile, outfile.replace('bam', 'bai')]
-    options = {'cores': 1, 'memory': "20g", 'walltime': "01:00:00"}
+    options = {'cores': 1, 'memory': "20g", 'walltime': "UNLIMITED"}
     spec = f"""
         picard SortSam I=$PWD/{infile} O=$PWD/{outfile} SO=coordinate CREATE_INDEX=true TMP_DIR=$PWD/{temp} 
         touch {done}
@@ -148,7 +150,7 @@ def merge_bams(infile, outfile, done, done_prev):
     """Sort bam file by coordinate."""
     inputs = [infile, done_prev]
     outputs = [done, outfile]
-    options = {'cores': 8, 'memory': "20g", 'walltime': "04:00:00"}
+    options = {'cores': 8, 'memory': "20g", 'walltime': "08:00:00"}
     spec = f"""
         samtools merge -@8 {outfile} {" ".join(infile)}
         touch {done}
@@ -175,7 +177,7 @@ def mark_and_remove_duplicates_old(infile, intermediate, metrics, outfile, temp,
 def mark_and_remove_duplicates(infile, metrics, outfile, temp, done, done_prev):
     """Mark and remove duplicates."""
     inputs = [infile, done_prev]
-    outputs = [done, outfile, metrics]
+    outputs = [done, outfile, metrics, outfile.replace(".bam", ".bai")]
     options = {'cores': 6, 'memory': '200g', 'walltime': "24:00:00"}
     spec = f"""
         picard MarkDuplicates I=$PWD/{infile} M=$PWD/{metrics} O=$PWD/{outfile} REMOVE_DUPLICATES=true CREATE_INDEX=true TMP_DIR=$PWD/{temp}
@@ -198,15 +200,33 @@ def get_coverage(infile, outfile, done, done_prev):
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
 
 
+################################################################################################
+#################################---- RENAME MERGED FILES ----##################################
+################################################################################################
+def rename_merged_bam(infile, outfile, done, done_prev):
+    """Replace read names by sample name"""
+    sample_name = infile.split("/")[-1].split(".")[0]
+    inputs = [infile, done_prev]
+    outputs = [done, outfile, outfile+".bai"]
+    options = {'cores': 1, 'memory': "1g", 'walltime': "UNLIMITED"}
+    spec = f"""
+        samtools view -H {infile}  | sed "s/SM:[^\t]*/SM:{sample_name}/g" | samtools reheader - {infile} > {outfile}
+        samtools index {outfile}
+        touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+
+
 ##########################################################################################
 #################################---- CALL VARIANTS ----##################################
 ##########################################################################################
 
 def call_variants_per_chromosome(chr, ref, infile, outfile, done, done_prev, ploidy="2"):
     """Call variants with the option to set ploidy to 1 or 2 (default is 2)."""
-    inputs = [done_prev, ref, infile]
+    inputs = done_prev+[ref, infile]
     outputs = [done, outfile, outfile+'.tbi']
-    options = {'cores': 32, 'memory': "16g", 'walltime': "06:00:00"}
+    options = {'cores': 32, 'memory': "16g", 'walltime': "24:00:00"}
     spec = f"""
         /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk HaplotypeCaller -R {ref} -I {infile} -L {chr} -ploidy {ploidy} --native-pair-hmm-threads 32 -ERC BP_RESOLUTION -O {outfile}
         touch {done}
@@ -303,32 +323,33 @@ study_name = "kuderna_2023"
 path_to_samples = f"../../../../shared_data/sequencing_data/baboon_other_studies/{study_name}"
 
 dct = {}
-n_sample = 3
 acc = 0
 with open(f"../metadata/sample_names_{study_name}.tsv") as file:
     for line in file:
-        if acc == 0:
-            acc += 1
+        if acc == 0: 
+            acc = 1
             continue
         line = line.rstrip().split("\t")
         if line[1] not in dct: 
-            acc += 1
-            if (acc-2) == n_sample: break
             dct[line[1]] = [line[3]]
         else: dct[line[1]].append(line[3])
         
-print(dct)
+# print(len(dct))
 
 # with open(f'../../../../shared_data/sequencing_data/baboon_other_studies/md5_{study_name}.md5', 'r') as file:
 #     sample_list = sorted(list(set([f.rstrip().split(' ')[1].split('/')[1].split('_')[0] for f in file])))
 
+n_sample = 300
 acc = 0
 for individual in list(dct.keys()):
+    # print(individual)
+    if acc == n_sample: break
+    if os.path.exists(f"../done/07_get_coverage/{individual}"): continue
+    acc += 1
     for sample_name in dct[individual]:
-        if not os.path.exists(f'{path_to_samples}/{sample_name}_1.fastq.gz'): continue
-        if not os.path.exists(f'{path_to_samples}/{sample_name}_2.fastq.gz'): continue
+        # if not os.path.exists(f'{path_to_samples}/{sample_name}_1.fastq.gz'): continue
+        # if not os.path.exists(f'{path_to_samples}/{sample_name}_2.fastq.gz'): continue
         # if all(os.path.exists(f"../done/08_call_variants/{sample_name}_{chr}") for chr in chr_lst): continue
-        acc += 1
         gwf.target_from_template(
             f"{sample_name}_FASTQ_to_uBAM", 
             FASTQ_to_uBAM(
@@ -336,7 +357,8 @@ for individual in list(dct.keys()):
                 fastq1 = f'{path_to_samples}/{sample_name}_1.fastq.gz',
                 fastq2 = f'{path_to_samples}/{sample_name}_2.fastq.gz',
                 outfile = f"../steps/01_uBAM_files/{sample_name}.bam",
-                done = f"../done/01_uBAM_files/{sample_name}"
+                done = f"../done/01_uBAM_files/{sample_name}",
+                tmp = f"../tmp/01_uBAM_files/"
                 )
             )
         gwf.target_from_template(
@@ -406,20 +428,34 @@ for individual in list(dct.keys()):
             done_prev = f"../done/06_mark_and_remove_duplicates/{individual}"
             )
         )
-    
-    # for chr in chr_lst:
-    #     gwf.target_from_template(
-    #         f"{individual}_{chr}_call_variants", 
-    #         call_variants_per_chromosome(
-    #             chr = chr,
-    #             ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
-    #             infile = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
-    #             outfile = f"../steps/08_call_variants/{individual}_{chr}.g.vcf.gz",
-    #             done = f"../done/08_call_variants/{individual}_{chr}",
-    #             done_prev = f"../done/07_get_coverage/{individual}"
-    #             )
-    #         )
-    # # if acc == 3: break
+
+
+for individual in list(dct.keys()):
+    gwf.target_from_template(
+        f"{individual}_rename_merged_bam",
+        rename_merged_bam(
+            infile = f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
+            outfile = f"../steps/08_rename_merged_bam/{individual}.mapped.nodupes.renamed.bam",
+            done = f"../done/08_rename_merged_bam/{individual}",
+            done_prev = f"../done/06_mark_and_remove_duplicates/{individual}"
+            )
+        )
+    acc_chr = 0
+    for chr in chr_lst:
+        acc_chr += 1
+        gwf.target_from_template(
+            f"{individual}_{chr}_call_variants", 
+            call_variants_per_chromosome(
+                chr = chr,
+                ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+                infile = f"../steps/08_rename_merged_bam/{individual}.mapped.nodupes.renamed.bam",
+                outfile = f"../steps/09_call_variants/{individual}_{chr}.g.vcf.gz",
+                done = f"../done/09_call_variants/{individual}_{chr}",
+                done_prev = [f"../done/07_get_coverage/{individual}", f"../done/08_rename_merged_bam/{individual}"]
+                )
+            )
+        # if acc_chr == 1: break
+        # break
     
 
 # for chr in chr_lst:
