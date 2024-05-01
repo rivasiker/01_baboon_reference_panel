@@ -1,0 +1,192 @@
+---
+title: "qc_test"
+format: html
+editor: source
+---
+
+```{r setup}
+
+library(tidyverse)
+
+```
+
+```{r}
+
+var_qual <- read_delim(
+  "../steps/13_qc/NC_044995.1.combined.lqual",
+  delim = "\t",
+  col_names = c("chr", "pos", "qual"),
+  skip = 1,
+  show_col_types = FALSE
+)
+
+var_qual |>
+  ggplot(aes(qual)) +
+  geom_density(fill = "dodgerblue1",
+               colour = "black",
+               alpha = 0.3) +
+  scale_x_continuous(trans = 'log10') +
+  theme_light() +
+  labs(
+    title = "Variant quality",
+    x = "Phred score (log scale)",
+    y = "Density"
+  )
+
+```
+
+```{r}
+
+var_depth <- read_delim(
+  "../steps/13_qc/NC_044995.1.combined.ldepth.mean",
+  delim = "\t",
+  col_names = c("chr", "pos", "mean_depth", "var_depth"),
+  skip = 1,
+  show_col_types = FALSE
+)
+
+summary(var_depth$mean_depth)
+
+var_depth |>
+  ggplot(aes(mean_depth)) +
+  geom_density(fill = "dodgerblue1",
+               colour = "black",
+               alpha = 0.3) +
+  theme_light() +
+  xlim(0, 100) +
+  labs(
+    title = "Variant mean depth",
+    x = "Mean depth per site",
+    y = "Density"
+  )
+
+```
+
+```{r}
+
+var_miss <-
+  read_delim(
+    "../steps/13_qc/NC_044995.1.combined.lmiss",
+    delim = "\t",
+    col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss", "fmiss"),
+    skip = 1,
+    show_col_types = FALSE
+  )
+
+summary(var_miss$fmiss)
+
+var_miss |>
+  ggplot(aes(fmiss)) +
+  geom_density(fill = "dodgerblue1",
+               colour = "black",
+               alpha = 0.3) +
+  theme_light() +
+  labs(
+    title = "Variant missingness",
+    x = "Missingness",
+    y = "Density"
+  )
+
+```
+
+```{r}
+
+var_freq <- read_delim(
+  "../steps/13_qc/NC_044995.1.combined.frq",
+  delim = "\t",
+  col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"),
+  skip = 1,
+  show_col_types = FALSE
+) |> 
+  rowwise() |> 
+  mutate(
+    maf = min(a1, a2)
+  )
+
+summary(var_freq$maf)
+
+var_freq |>
+  ggplot(aes(maf)) +
+  geom_density(fill = "dodgerblue1",
+               colour = "black",
+               alpha = 0.3) +
+  theme_light() +
+  labs(
+    title = "Minor allele frequency",
+    x = "MAF",
+    y = "Density"
+  )
+
+```
+
+```{r}
+
+ind_depth <-
+  read_delim(
+    "../steps/13_qc/NC_044995.1.combined.idepth",
+    delim = "\t",
+    col_names = c("ind", "nsites", "depth"),
+    skip = 1,
+    show_col_types = FALSE
+  )
+
+ind_depth |> 
+  ggplot(aes(depth)) +
+  geom_histogram(fill = "dodgerblue1",
+                 colour = "black",
+                 alpha = 0.3) +
+  theme_light() +
+  labs(
+    title = "Mean depth per individual",
+    x = "Mean depth",
+    y = "Count"
+  )
+
+```
+
+```{r}
+
+ind_miss  <- read_delim(
+  "../steps/13_qc/NC_044995.1.combined.imiss",
+  delim = "\t",
+  col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"),
+  skip = 1,
+  show_col_types = FALSE
+)
+
+ind_miss |>
+  ggplot(aes(fmiss)) +
+  geom_histogram(fill = "dodgerblue1",
+                 colour = "black",
+                 alpha = 0.3) + 
+  theme_light() +
+  labs(
+    title = "Proportion of missing data per individual",
+    x = "Missingness",
+    y = "Count"
+  )
+
+```
+
+```{r}
+
+ind_het <- read_delim(
+  "../steps/13_qc/NC_044995.1.combined.het",
+  delim = "\t",
+  col_names = c("ind", "obs_hom", "exp_hom", "nsites", "f"),
+  skip = 1,
+  show_col_types = FALSE
+)
+
+ind_het |> ggplot(aes(f)) +
+  geom_histogram(fill = "dodgerblue1",
+                 colour = "black",
+                 alpha = 0.3) +
+  theme_light() +
+  labs(
+    title = "Proportion of missing data per individual",
+    x = "Missingness",
+    y = "Count"
+  )
+
+```
