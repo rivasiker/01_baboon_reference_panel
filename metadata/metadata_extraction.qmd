@@ -118,6 +118,18 @@ Robinson |>
 
 ```
 
+```{r}
+
+shuyu_list <- c("SAMN10524564", "SAMN10524546", "SAMN10524552", "SAMN10524565", "SAMN10524554", "SAMN10524539", "SAMN10524543", "SAMN10524555", "SAMN10524547", "SAMN10524550", "SAMN10524563", "SAMN10524560", "SAMN10524551", "SAMN10524559", "SAMN11119509", "SAMN10524549", "SAMN10524562", "SAMN10524548", "SAMN11119508", "SAMN10524566", "SAMN11119507", "SAMN10524544", "SAMN09761236", "SAMN10524567", "SAMN10524561", "SAMN10524540", "SAMN10524545", "SAMN10524541", "SAMN10524556", "SAMN10524558", "SAMN10524542")
+
+paste0(filter(Robinson, sample_accession %in% shuyu_list)$run_accession, collapse = "\\|") |> 
+  cat()
+
+shuyu_list %in% Robinson$sample_accession
+
+
+```
+
 All of the samples are found.
 
 # Rogers et al. 2019
@@ -214,13 +226,6 @@ Snyder_Mackler |>
 
 Snyder_Mackler |> 
   write_tsv("sample_names_snyder-mackler_2016.tsv")
-
-```
-
-```{r}
-
-Reduce(intersect, list(Vilgalys_Fogel$sample_alias, Snyder_Mackler$sample_alias)) |> 
-  sort()
 
 ```
 
@@ -336,6 +341,12 @@ wal <- read_csv("metadata_from_babase_wall2016.csv") |>
   )
 
 
+read_csv("metadata_from_babase_snydermackler2016.csv") |> 
+  group_by(sname) |> 
+  filter(length(unique(ncbi_id)) > 1) |> 
+  ungroup() |> 
+  arrange(sname)
+
 ```
 
 ```{r}
@@ -402,6 +413,95 @@ final_table |>
   write_csv("duplicate_samples_gencove_metadata.csv")
 
 ```
+
+
+# Selecting sequences for poop
+
+```{r}
+
+amboseli_imputed_vcf <- c("LQF-AMB-014", "LQF-AMB-015", "LQF-AMB-082", "LQF-AMB-105", "LQF-AMB-106", "LQF-AMB-107", "LQF-AMB-111", "LQF-AMB-114", "LQF-AMB-184", "LQF-AMB-239", "LQF-AMB-254", "LQF-AMB-255", "LQF-AMB-257", "LQF-AMB-258", "LQF-AMB-261", "LQF-AMB-272", "LQF-AMB-274", "LQF-AMB-282", "LQF-AMB-293", "LQF-AMB-311", "LQF-AMB-317", "LQF-AMB-446", "LQF-AMB-448", "LQF-AMB-449", "LQF-AMB-452", "LQF-AMB-453", "LQF-AMB-454", "LQF-AMB-455", "LQF-AMB-456", "LQF-AMB-457", "LQF-AMB-458", "LQF-AMB-459", "LQF-AMB-460", "LQF-AMB-461", "LQF-AMB-462", "LQF-AMB-463") |> 
+  str_remove_all('LQF-') |> 
+  str_replace_all("-", "_") |> 
+  sort()
+
+amboseli_imputed_vcf 
+
+```
+
+
+
+```{r}
+
+# Previously published, low-quality fecal
+
+## 52, including HAP_fDNA and LIT_fDNA. AMB_041 and AMB_043 are missing.
+only_fecal <-
+  final_table |>
+  filter(population == "Amboseli", sample_type == "low_quality_fecal") |>
+  mutate(
+    imputed = id %in% amboseli_imputed_vcf
+  ) |>
+  select(sample_alias, imputed)
+
+## 52, all labeled as AMB_XXX. There are no stats about HAP_fDNA and LIT_fDNA.
+fec <- read_csv('TableS2_Snyder-Mackler.csv') |> 
+  transmute(
+    id = library_name,
+    endogenous_percentage = as.numeric(str_remove_all(`% baboon DNA pre-enrichment`, '%'))
+  ) |> 
+  left_join(sny, by = join_by(id == id_sny)) |> 
+  left_join(only_fecal, by = join_by(id == sample_alias)) |> 
+  select(-id)
+  
+
+# Previously published, high-quality tissue
+
+only_tissue <- final_table |> 
+  filter(population == "Amboseli", sample_type == "high_quality_tissue") |> 
+  select(id, sname)
+
+prev <- read_csv('TableS1_Vilgalys_Fogel.csv') |> 
+  filter(population == "Amboseli") |> 
+  transmute(
+    id, 
+    population,
+    coverage = nodup_mapq10_coveraged
+  ) |> 
+  full_join(only_tissue, by = join_by(id)) |> 
+  select(sname, coverage) |> 
+  arrange(desc(is.na(sname))) |> 
+  mutate(
+    type = "prev",
+    sname = ifelse(is.na(sname), paste0("UNK_", 1:n()), sname)
+  ) 
+
+
+# Newly generated, high-quality tissue
+
+new <- read_csv('newly_sequenced_baboons_coverage.csv') |> 
+  transmute(
+    sname, 
+    coverage = round(total_bp/(2.9*(10^9)), 3),
+    type = 'new'
+  )
+
+# Combine
+
+total_table <- bind_rows(prev, new) |> 
+  group_by(sname) |> 
+  summarise(
+    gDNA_coverage = sum(coverage),
+    n = n()
+  ) |> 
+  left_join(fec, by = "sname") 
+
+total_table  |> 
+  write_csv('Amboseli_gDNA_fDNA_stats_20240319.csv')
+
+
+```
+
+
 
 
 
