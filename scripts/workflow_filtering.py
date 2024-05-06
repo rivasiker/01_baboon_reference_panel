@@ -86,9 +86,83 @@ def het_and_inbred_per_individual(infile, outfile, done, done_prev):
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
 
+def perform_qc(outfile, done, infile, done_prev, jobname):
+    gwf.target_from_template(
+        f"{jobname}_allele_frequency",
+        allele_frequency_per_site(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_frq", 
+            done_prev = done_prev
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{jobname}_depth_per_individual",
+        depth_per_individual(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_idepth.mean", 
+            done_prev = done_prev
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{jobname}_depth_per_site",
+        depth_per_site(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_ldepth.mean", 
+            done_prev = done_prev
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{jobname}_quality_per_site",
+        quality_per_site(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_lqual", 
+            done_prev = done_prev
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{jobname}_missingness_per_individual",
+        missingness_per_individual(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_imiss", 
+            done_prev = done_prev
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{jobname}_missingness_per_site",
+        missingness_per_site(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_lmiss", 
+            done_prev = done_prev
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{jobname}_het_and_inbred_per_individual",
+        het_and_inbred_per_individual(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_het", 
+            done_prev = done_prev
+            )
+        )
 
 
 
+
+############################################################################################
+#################################---- QUALITY CONTROL ----##################################
+############################################################################################
 
 
 # study_name_list = ["NC_044995.1.combined"]
@@ -102,74 +176,82 @@ for study_name in study_name_list:
     done_prev = f"../done/12_concatenated_vcf/done_{study_name}"
     # infile = f"../steps/11_final_vcf/kuderna_2023/{study_name}.vcf.gz"
     # done_prev = f"../done/11_final_vcf/done_kuderna_2023_NC_044995.1"
+    outfile = f"{outfile_prexif}/{study_name}"
+    done = f"{done_prexif}/{study_name}"
+
+    perform_qc(outfile, done, infile, done_prev, study_name)
+
+    
+    
+
+######################################################################################
+#################################---- FILTERING ----##################################
+######################################################################################
+
+def qc_filtering(infile, outfile, done, done_prev, maf, miss, qual, min_depth, max_depth):
+    """Calculate heterozygosity and inbreeding coefficient per individual."""
+    inputs = [infile] + done_prev
+    outputs = [outfile+".filtered.vcf.gz", done]
+    options = {'cores': 1, 'memory': '20g', 'walltime': "12:00:00"}
+    spec = f"""
+        vcftools --gzvcf {infile} \
+        --remove-indels --maf {maf} --max-missing {miss} --minQ {qual} \
+        --min-meanDP {min_depth} --max-meanDP {max_depth} \
+        --minDP {min_depth} --maxDP {max_depth} --out {outfile} --recode --stdout | gzip -c > \
+        {outfile+".filtered.vcf.gz"}
+        touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+maf=0.1
+miss=0.9
+qual=30
+min_depth=10
+max_depth=80
+
+study_name_list = ["robinson_2019"]
+
+for study_name in study_name_list:
+
+    outfile_prexif = "../steps/14_qc_filtering"
+    done_prexif = "../done/14_qc_filtering"
+    done_prexif_prev = "../done/13_qc"
+    infile = f"../steps/12_concatenated_vcf/{study_name}.vcf.gz"
+    done_prev = [f"{done_prexif_prev}/{study_name}_{i}" for i in ["frq", "idepth.mean", "ldepth.mean", "lqual", "imiss", "lmiss", "het"]]
 
     gwf.target_from_template(
-        f"{study_name}_allele_frequency",
-        allele_frequency_per_site(
-            infile = infile, 
-            outfile = f"{outfile_prexif}/{study_name}", 
-            done = f"{done_prexif}/{study_name}_frq", 
-            done_prev = done_prev
+            f"{study_name}_qc_filtering",
+            qc_filtering(
+                infile = infile, 
+                outfile = f"{outfile_prexif}/{study_name}", 
+                done = f"{done_prexif}/{study_name}", 
+                done_prev = done_prev,
+                maf = maf,
+                miss = miss,
+                qual = qual,
+                min_depth = min_depth,
+                max_depth = max_depth
+                )
             )
-        )
-    
-    gwf.target_from_template(
-        f"{study_name}_depth_per_individual",
-        depth_per_individual(
-            infile = infile, 
-            outfile = f"{outfile_prexif}/{study_name}", 
-            done = f"{done_prexif}/{study_name}_idepth.mean", 
-            done_prev = done_prev
-            )
-        )
-    
-    gwf.target_from_template(
-        f"{study_name}_depth_per_site",
-        depth_per_site(
-            infile = infile, 
-            outfile = f"{outfile_prexif}/{study_name}", 
-            done = f"{done_prexif}/{study_name}_ldepth.mean", 
-            done_prev = done_prev
-            )
-        )
-    
-    gwf.target_from_template(
-        f"{study_name}_quality_per_site",
-        quality_per_site(
-            infile = infile, 
-            outfile = f"{outfile_prexif}/{study_name}", 
-            done = f"{done_prexif}/{study_name}_lqual", 
-            done_prev = done_prev
-            )
-        )
-    
-    gwf.target_from_template(
-        f"{study_name}_missingness_per_individual",
-        missingness_per_individual(
-            infile = infile, 
-            outfile = f"{outfile_prexif}/{study_name}", 
-            done = f"{done_prexif}/{study_name}_imiss", 
-            done_prev = done_prev
-            )
-        )
-    
-    gwf.target_from_template(
-        f"{study_name}_missingness_per_site",
-        missingness_per_site(
-            infile = infile, 
-            outfile = f"{outfile_prexif}/{study_name}", 
-            done = f"{done_prexif}/{study_name}_lmiss", 
-            done_prev = done_prev
-            )
-        )
-    
-    gwf.target_from_template(
-        f"{study_name}_het_and_inbred_per_individual",
-        het_and_inbred_per_individual(
-            infile = infile, 
-            outfile = f"{outfile_prexif}/{study_name}", 
-            done = f"{done_prexif}/{study_name}_het", 
-            done_prev = done_prev
-            )
-        )
 
+
+############################################################################################################
+#################################---- QUALITY CONTROL AFTER FILTERING ----##################################
+############################################################################################################
+
+
+# study_name_list = ["NC_044995.1.combined"]
+study_name_list = ["robinson_2019"]
+
+for study_name in study_name_list:
+
+    outfile_prexif = "../steps/13_qc"
+    done_prexif = "../done/13_qc"
+    infile = f"../steps/14_qc_filtering/{study_name}.filtered.vcf.gz"
+    done_prev = f"../done/14_qc_filtering/{study_name}"
+    # infile = f"../steps/11_final_vcf/kuderna_2023/{study_name}.vcf.gz"
+    # done_prev = f"../done/11_final_vcf/done_kuderna_2023_NC_044995.1"
+    outfile = f"{outfile_prexif}/{study_name}_filtered"
+    done = f"{done_prexif}/{study_name}_filtered"
+
+    perform_qc(outfile, done, infile, done_prev, study_name+"_filtered")

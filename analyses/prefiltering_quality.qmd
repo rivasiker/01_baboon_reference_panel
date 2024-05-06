@@ -7,13 +7,15 @@ editor: source
 ```{r setup}
 
 library(tidyverse)
+path = '../steps/13_qc/robinson_2019'
+path = '../steps/14_qc_filtering/robinson_2019'
 
 ```
 
 ```{r}
 
 var_qual <- read_delim(
-  "../steps/13_qc/NC_044995.1.combined.lqual",
+  paste0(path, ".lqual"),
   delim = "\t",
   col_names = c("chr", "pos", "qual"),
   skip = 1,
@@ -38,7 +40,7 @@ var_qual |>
 ```{r}
 
 var_depth <- read_delim(
-  "../steps/13_qc/NC_044995.1.combined.ldepth.mean",
+  paste0(path, ".ldepth.mean"),
   delim = "\t",
   col_names = c("chr", "pos", "mean_depth", "var_depth"),
   skip = 1,
@@ -66,7 +68,7 @@ var_depth |>
 
 var_miss <-
   read_delim(
-    "../steps/13_qc/NC_044995.1.combined.lmiss",
+    paste0(path, ".lmiss"),
     delim = "\t",
     col_names = c("chr", "pos", "nchr", "nfiltered", "nmiss", "fmiss"),
     skip = 1,
@@ -92,7 +94,7 @@ var_miss |>
 ```{r}
 
 var_freq <- read_delim(
-  "../steps/13_qc/NC_044995.1.combined.frq",
+  paste0(path, ".frq"),
   delim = "\t",
   col_names = c("chr", "pos", "nalleles", "nchr", "a1", "a2"),
   skip = 1,
@@ -104,6 +106,10 @@ var_freq <- read_delim(
   )
 
 summary(var_freq$maf)
+
+# var_freq |> 
+#   group_by(maf) |> 
+#   tally()
 
 var_freq |>
   ggplot(aes(maf)) +
@@ -123,7 +129,7 @@ var_freq |>
 
 ind_depth <-
   read_delim(
-    "../steps/13_qc/NC_044995.1.combined.idepth",
+    paste0(path, ".idepth"),
     delim = "\t",
     col_names = c("ind", "nsites", "depth"),
     skip = 1,
@@ -147,7 +153,7 @@ ind_depth |>
 ```{r}
 
 ind_miss  <- read_delim(
-  "../steps/13_qc/NC_044995.1.combined.imiss",
+  paste0(path, ".imiss"),
   delim = "\t",
   col_names = c("ind", "ndata", "nfiltered", "nmiss", "fmiss"),
   skip = 1,
@@ -171,7 +177,7 @@ ind_miss |>
 ```{r}
 
 ind_het <- read_delim(
-  "../steps/13_qc/NC_044995.1.combined.het",
+  paste0(path, ".het"),
   delim = "\t",
   col_names = c("ind", "obs_hom", "exp_hom", "nsites", "f"),
   skip = 1,
@@ -184,8 +190,8 @@ ind_het |> ggplot(aes(f)) +
                  alpha = 0.3) +
   theme_light() +
   labs(
-    title = "Proportion of missing data per individual",
-    x = "Missingness",
+    title = "Inbreeding",
+    x = "Inbreeding coefficient",
     y = "Count"
   )
 

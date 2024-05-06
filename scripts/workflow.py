@@ -290,7 +290,7 @@ def genotype_gvcfs(infile, ref, outfile, done, done_prev):
     """Genotype gVCFs."""
     inputs = [done_prev, ref, infile.replace('gendb://', '')]
     outputs = [done, outfile, outfile+'.tbi']
-    options = {'cores': 1, 'memory': "32g", 'walltime': "UNLIMITED"}
+    options = {'cores': 1, 'memory': "80g", 'walltime': "UNLIMITED"}
     spec = f"""
     /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk GenotypeGVCFs -R {ref} -V {infile} -O {outfile}
     touch {done}
@@ -305,7 +305,7 @@ def genotype_gvcfs(infile, ref, outfile, done, done_prev):
 def concatenate_vcfs(infiles, outfile, done, done_prev):
     """Concatenate VCFs."""
     inputs = done_prev + infiles
-    outputs = [done, outfile, outfile+".csi"]
+    outputs = [done, outfile]
     options = {'cores': 8, 'memory': "16g", 'walltime': "UNLIMITED"}
     spec = f"""
     bcftools concat --threads 8 -o {outfile} {" ".join(infiles)}
@@ -346,8 +346,7 @@ chr_lst = [
 # path_to_samples = "../../../../shared_data/sequencing_data/baboon_other_studies/kuderna_2023/"
 
 study_name_list = ["kuderna_2023", "robinson_2019", "vilgalys_fogel_2022"]
-acc_lim = 500
-# study_name_list = ["kuderna_2023", "robinson_2019"]
+# acc_lim = 500
 
 for study_name in study_name_list:
 
@@ -375,16 +374,16 @@ for study_name in study_name_list:
     #     sample_list = sorted(list(set([f.rstrip().split(' ')[1].split('/')[1].split('_')[0] for f in file])))
 
     # n_sample = 300
-    acc = 0
+    # acc = 0
     for individual in list(dct.keys()):
     # for individual in individual_list:
         # print(individual)
         # if acc == n_sample: break
         if os.path.exists(f"../done/07_get_coverage/{individual}"): continue
-        acc += 1
+        # acc += 1
         for sample_name in dct[individual]:
-            if not os.path.exists(f'{path_to_samples}/{sample_name}_1.fastq.gz'): continue
-            if not os.path.exists(f'{path_to_samples}/{sample_name}_2.fastq.gz'): continue
+            # if not os.path.exists(f'{path_to_samples}/{sample_name}_1.fastq.gz'): continue
+            # if not os.path.exists(f'{path_to_samples}/{sample_name}_2.fastq.gz'): continue
             # if all(os.path.exists(f"../done/08_call_variants/{sample_name}_{chr}") for chr in chr_lst): continue
             gwf.target_from_template(
                 f"{sample_name}_FASTQ_to_uBAM", 
@@ -472,11 +471,11 @@ for study_name in study_name_list:
                 )
             )
         
-        if acc == acc_lim: break
+        # if acc == acc_lim: break
 
 
 
-acc_lim = 200
+# acc_lim = 500
 for study_name in study_name_list:
 
     individual_list = ["SAMN10524564", "SAMN10524546", "SAMN10524552", "SAMN10524565", "SAMN10524554", "SAMN10524539", "SAMN10524543", "SAMN10524555", "SAMN10524547", "SAMN10524550", "SAMN10524563", "SAMN10524560", "SAMN10524551", "SAMN10524559", "SAMN11119509", "SAMN10524549", "SAMN10524562", "SAMN10524548", "SAMN11119508", "SAMN10524566", "SAMN11119507", "SAMN10524544", "SAMN09761236", "SAMN10524567", "SAMN10524561", "SAMN10524540", "SAMN10524545", "SAMN10524541", "SAMN10524556", "SAMN10524558", "SAMN10524542"]
@@ -496,10 +495,10 @@ for study_name in study_name_list:
                 dct[line[1]] = [line[3]]
             else: 
                 dct[line[1]].append(line[3])
-    acc = 0
+    # acc = 0
     for individual in list(dct.keys()):
-        if not os.path.exists(f"../done/08_rename_merged_bam/{individual}"): continue
-        acc += 1
+        # if not os.path.exists(f"../done/08_rename_merged_bam/{individual}"): continue
+        # acc += 1
         for chr in chr_lst:
             if os.path.exists(f"../done/09_call_variants/{individual}_{chr}"): continue
             gwf.target_from_template(
@@ -513,7 +512,7 @@ for study_name in study_name_list:
                     done_prev = [f"../done/07_get_coverage/{individual}", f"../done/08_rename_merged_bam/{individual}"]
                     )
                 )
-        if acc == acc_lim: break
+        # if acc == acc_lim: break
             
 
 
