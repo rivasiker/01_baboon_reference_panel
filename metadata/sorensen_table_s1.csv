@@ -1,0 +1,219 @@
+﻿Seq-ID,Local ID,Genus,Species,Origin,GPS coordinates (latitude),GPS coordinates (longitude),Sex
+PD_0067,1043,Theropithecus,gelada,captive,,,M
+PD_0199,09SNF1101115,Papio,anubis,"Serengeti, Tanzania",S02.28761,E034.68870,F
+PD_0200,11SNF1101115,Papio,anubis,"Serengeti, Tanzania",S02.26867,E034.66942,F
+PD_0201,19SNM1131115,Papio,anubis,"Serengeti, Tanzania",S02.32102,E034.84388,M
+PD_0202,20SNF1131115,Papio,anubis,"Serengeti, Tanzania",S02.32102,E034.84367,F
+PD_0203,21SNF1151115,Papio,anubis,"Serengeti, Tanzania",S02.29965,E034.78592,F
+PD_0204,03ANM1080815,Papio,anubis,"Arusha, Tanzania",S03.23696,E036.85302,M
+PD_0205,05ANF1030116,Papio,anubis,"Arusha, Tanzania",S03.23438,E036.85582,F
+PD_0206,09ANF1040116,Papio,anubis,"Arusha, Tanzania",S03.27550,E036.89670,F
+PD_0207,12ANM1050116,Papio,anubis,"Arusha, Tanzania",S03.23622,E036.85692,M
+PD_0208,04NCF1140516,Papio,anubis,"Ngorongoro, Tanzania",S03.22653,E035.50597,F
+PD_0209,05NCF1150516,Papio,anubis,"Ngorongoro, Tanzania",S03.15231,E035.60008,F
+PD_0210,09NCF8170516,Papio,anubis,"Ngorongoro, Tanzania",S03.29935,E035.59225,F
+PD_0211,12NCF5210317,Papio,anubis,"Ngorongoro, Tanzania",S03.30111,E035.59233,F
+PD_0212,18NCF8220317,Papio,anubis,"Ngorongoro, Tanzania",S03.29973,E035.59223,F
+PD_0213,07RUF1090716,Papio,cynocephalus,"Ruaha, Tanzania",S07.68278,E034.93070,F
+PD_0214,09RUF1100716,Papio,cynocephalus,"Ruaha, Tanzania",S07.68085,E034.92972,F
+PD_0215,13RUM1130716,Papio,cynocephalus,"Ruaha, Tanzania",S07.60178,E034.90200,M
+PD_0216,16RUF8140716,Papio,cynocephalus,"Ruaha, Tanzania",S07.59980,E034.90375,F
+PD_0217,17RUM5140716,Papio,cynocephalus,"Ruaha, Tanzania",S07.59862,E034.88440,M
+PD_0218,02GNM1200916,Papio,anubis,"Gombe, Tanzania",S04.63918 ,E029.63076,M
+PD_0219,03GNF8200916,Papio,anubis,"Gombe, Tanzania",S04.63888,E029.63070,F
+PD_0220,08GNM1210916,Papio,anubis,"Gombe, Tanzania",S04.66618 ,E029.62386,M
+PD_0221,09GNF1210916,Papio,anubis,"Gombe, Tanzania",S04.66689 ,E029.62393,F
+PD_0222,10GNF1210916,Papio,anubis,"Gombe, Tanzania",S04.66666 ,E029.62395,F
+PD_0223,02UNM1220616,Papio,cynocephalus,"Udzungwa, Tanzania",S07.84488,E036.88652,M
+PD_0224,23UNF1120317,Papio,cynocephalus,"Udzungwa, Tanzania",S07.49594,E036.56725,F
+PD_0225,24UNF1150317,Papio,cynocephalus,"Udzungwa, Tanzania",S07.81512,E036.89523,F
+PD_0226,25UNF1150317,Papio,cynocephalus,"Udzungwa, Tanzania",S07.84805,E036.88613,F
+PD_0227,27UNM1160317,Papio,cynocephalus,"Udzungwa, Tanzania",S07.80575,E036.89683,M
+PD_0228,01MNM1300916,Papio,cynocephalus,"Mahale, Tanzania",S06.11885 ,E029.73054,M
+PD_0229,02MNM1300916,Papio,cynocephalus,"Mahale, Tanzania",S06.11899 ,E029.72996,M
+PD_0230,04MNM1300916,Papio,cynocephalus,"Mahale, Tanzania",S06.11903 ,E029.73032,M
+PD_0231,09MNM1011016,Papio,cynocephalus,"Mahale, Tanzania",S06.11735 ,E029.73055,M
+PD_0232,14MNF1041016,Papio,cynocephalus,"Mahale, Tanzania",S06.03722 ,E029.74063,F
+PD_0233,05KNM1121016,Papio,cynocephalus,"Katavi, Tanzania",S06.63357 ,E031.14192,M
+PD_0234,10KNM1131016,Papio,cynocephalus,"Katavi, Tanzania",S06.63435 ,E031.14276,M
+PD_0235,01SGM1270217,Papio,cynocephalus,"Selous, Tanzania",S08.46428,E038.55282,M
+PD_0236,04SGM2030317,Papio,cynocephalus,"Selous, Tanzania",S07.53590,E037.76624,M
+PD_0237,07SGF1050317,Papio,cynocephalus,"Selous, Tanzania",S07.74555,E038.19652,F
+PD_0238,19LMF8280815,Papio,anubis,"Lake Manyara, Tanzania",S03.40273,E035.81382,F
+PD_0239,20LMF5280815,Papio,anubis,"Lake Manyara, Tanzania",S03.37805,E035.83225,F
+PD_0240,21LMF2290815,Papio,anubis,"Lake Manyara, Tanzania",S03.40755,E035.83487,F
+PD_0241,22LMF5290815,Papio,anubis,"Lake Manyara, Tanzania",S03.39319,E035.82323,F
+PD_0242,23LMM1081215,Papio,anubis,"Lake Manyara, Tanzania",S03.47642,E035.77950,M
+PD_0243,01TNF1231215,Papio,anubis,"Tarangire, Tanzania",S03.77943,E035.96525,F
+PD_0244,04TNF1231215,Papio,anubis,"Tarangire, Tanzania",S03.78172,E035.96652,F
+PD_0265,122 / 05TNF11241215,Papio,anubis,"Tarangire, Tanzania",S03.88543,E036.07542,F
+PD_0266,123 / 12TNM9251215,Papio,anubis,"Tarangire, Tanzania",S03.78723,E036.04405,M
+PD_0267,124 / 17TNM1271215,Papio,anubis,"Tarangire, Tanzania",S03.76815,E036.02072,M
+PD_0268,125 / 6MKM1130715,Papio,cynocephalus,"Mikumi, Tanzania",S07.34048,E037.11778,M
+PD_0269,126 / 7MKM1140715,Papio,cynocephalus,"Mikumi, Tanzania",S07.35945,E037.05548,M
+PD_0270,127 / 8MKF1150715,Papio,cynocephalus,"Mikumi, Tanzania",S07.33710,E037.11446,F
+PD_0271,128 /10MKF1150715,Papio,cynocephalus,"Mikumi, Tanzania",S07.31130,E037.17857,F
+PD_0272,129 / 11MKF1150715,Papio,cynocephalus,"Mikumi, Tanzania",S07.31127,E037.17862,F
+PD_0390,T13,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,F
+PD_0391,T19,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,F
+PD_0392,T44,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,F
+PD_0393,T45,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,F
+PD_0394,T63,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,F
+PD_0395,T15,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,M
+PD_0396,T27,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,M
+PD_0397,T35,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,M
+PD_0398,T37,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,M
+PD_0399,T49,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,M
+PD_0400,T51,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,M
+PD_0401,T66,Papio,papio,"Niokolo Koba, Senegal",N13.02622,W013.29440,M
+PD_0492,1 / 30LMF5190416,Papio,anubis,"Lake Manyara, Tanzania",S03.62500,E036.39062,F
+PD_0493,12 / 08SNM1091115,Papio,anubis,"Serengeti, Tanzania",S02.49063,E034.84278,M
+PD_0494,18 / 24SNM5151115,Papio,anubis,"Serengeti, Tanzania",S02.33002,E034.84545,M
+PD_0495,19 / 25SNF1161115,Papio,anubis,"Serengeti, Tanzania",S02.08357,E034.63790,F
+PD_0496,20 / 26SNM1181115,Papio,anubis,"Serengeti, Tanzania",S02.33135,E034.84513,M
+PD_0497,21 / 27SNM1191115,Papio,anubis,"Serengeti, Tanzania",S02.19595,E034.26968,M
+PD_0498,23 / 31SNM1201115,Papio,anubis,"Serengeti, Tanzania",S02.18847,E034.11523,M
+PD_0499,24 / 32SNF1201115,Papio,anubis,"Serengeti, Tanzania",S02.18657,E034.10915,F
+PD_0500,25 / 33SNF1201115,Papio,anubis,"Serengeti, Tanzania",S02.18312,E034.10040,F
+PD_0501,26 / 37SNF1221115,Papio,anubis,"Serengeti, Tanzania",S02.19155,E033.87475,F
+PD_0502,38 / 10NCM8170516,Papio,anubis,"Ngorongoro, Tanzania",S03.29935,E035.59226,M
+PD_0503,44 / 14RUF5130716,Papio,cynocephalus,"Ruaha, Tanzania",S07.59978,E034.90537,F
+PD_0504,56 / 13GNM1210916,Papio,anubis,"Gombe, Tanzania",S04.73325 ,E029.60915,M
+PD_0505,57 / 19GNM2220916,Papio,anubis,"Gombe, Tanzania",S04.67816 ,E029.62085,M
+PD_0506,58 / 20GNF5220916,Papio,anubis,"Gombe, Tanzania",S04.67811 ,E029.62168,F
+PD_0507,59 / 21GNF1220916,Papio,anubis,"Gombe, Tanzania",S04.67817,E029.62083,F
+PD_0508,60 / 22GNM1220916,Papio,anubis,"Gombe, Tanzania",S04.67841 ,E029.62178,M
+PD_0509,61 / 23GNF1220916,Papio,anubis,"Gombe, Tanzania",S04.62763 ,E029.63499,F
+PD_0637,9 / 5MKM1130715,Papio,cynocephalus,"Mikumi, Tanzania",S07.36738,E037.04478,M
+PD_0641,31 / 15TNF2261215,Papio,anubis,"Tarangire, Tanzania",S03.79297,E035.95868,F
+PD_0642,32 / 23TNM1311215,Papio,anubis,"Tarangire, Tanzania",S03.78770,E036.04482,M
+PD_0649,62 / 24GNF1220916,Papio,anubis,"Gombe, Tanzania",S04.62806,E029.63440,F
+PD_0650,63 / 26GNM1230916,Papio,anubis,"Gombe, Tanzania",S04.67113 ,E029.62853,M
+PD_0651,64 / 28GNF1230916,Papio,anubis,"Gombe, Tanzania",S04.67092 ,E029.62859,F
+PD_0652,65 / 30GNF1230916,Papio,anubis,"Gombe, Tanzania",S04.67112 ,E029.62763,F
+PD_0653,66 / 32GNF1230916,Papio,anubis,"Gombe, Tanzania",S04.67257 ,E029.63104,F
+PD_0654,67 / 33GNM1230916,Papio,anubis,"Gombe, Tanzania",S04.67255 ,E029.63106,M
+PD_0658,79 / 08MNM1011016,Papio,cynocephalus,"Mahale, Tanzania",S06.12868 ,E029.73221,M
+PD_0659,81 / 13MNF1031016,Papio,cynocephalus,"Mahale, Tanzania",S06.03667,E029.74191,F
+PD_0662,85 / 01UGF5101016,Papio,cynocephalus,"Issa Valley, Tanzania",S05.50952 ,E030.56185,F
+PD_0674,102 / 04LMF8160815,Papio,anubis,"Lake Manyara, Tanzania",S03.39010,E035.82521,F
+PD_0675,103 / 06LMF5170815,Papio,anubis,"Lake Manyara, Tanzania",S03.44967,E035.79568,F
+PD_0676,104 / 07LMF5170815,Papio,anubis,"Lake Manyara, Tanzania",S03.37627,E035.83327,F
+PD_0677,105 / 11LMF5200815,Papio,anubis,"Lake Manyara, Tanzania",S03.38924,E035.82561,F
+PD_0678,106 / 12LMF2210815,Papio,anubis,"Lake Manyara, Tanzania",S03.38903,E035.82445,F
+PD_0679,107 / 13LMM8210815,Papio,anubis,"Lake Manyara, Tanzania",S03.38853,E035.82323,M
+PD_0680,108 / 14LMF5220815,Papio,anubis,"Lake Manyara, Tanzania",S03.40577,E035.81279,F
+PD_0681,109 / 16LMM5250815,Papio,anubis,"Lake Manyara, Tanzania",S03.41109,E035.82048,M
+PD_0682,110 / 17LMF5270815,Papio,anubis,"Lake Manyara, Tanzania",S03.40309,E035.82507,F
+PD_0683,111 / 18LMF5270815,Papio,anubis,"Lake Manyara, Tanzania",S03.42710,E035.81178,F
+PD_0684,117 / 24LMM2081215,Papio,anubis,"Lake Manyara, Tanzania",S03.47645,E035.77947,M
+PD_0685,118 / 25LMF1081215,Papio,anubis,"Lake Manyara, Tanzania",S03.47643,E035.77948,F
+PD_0686,119 / 27LMF1081215,Papio,anubis,"Lake Manyara, Tanzania",S03.47644,E035.77946,F
+PD_0687,130 / 12MKM1150715,Papio,cynocephalus,"Mikumi, Tanzania",S07.30988,E037.17853,M
+PD_0688,131 / 13MKM1150715,Papio,cynocephalus,"Mikumi, Tanzania",S07.30651,E037.17908,M
+PD_0689,132 / 14MKM1160715,Papio,cynocephalus,"Mikumi, Tanzania",S07.37108,E037.03915,M
+PD_0690,133 / 16MKF1160715,Papio,cynocephalus,"Mikumi, Tanzania",S07.35721,E037.09791,F
+PD_0691,134 / 19MKM1170715,Papio,cynocephalus,"Mikumi, Tanzania",S07.34337,E037.16545,M
+PD_0692,35221_BZ12030,Papio,ursinus (grayfoot),"Dendro Park, Zambia",ca. S16.14544,ca. E026.06255,M
+PD_0693,35225_BZ12031,Papio,ursinus (grayfoot),"Dendro Park, Zambia",ca. S16.14544,ca. E026.06255,F
+PD_0694,35227_BZ12032,Papio,ursinus (grayfoot),"Dendro Park, Zambia",ca. S16.14544,ca. E026.06255,F
+PD_0695,35229_BZ12033,Papio,ursinus (grayfoot),"Dendro Park, Zambia",ca. S16.14544,ca. E026.06255,F
+PD_0696,39876_97070,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0697,39877_97071,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0698,39878_97073,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,F
+PD_0699,39880_97081,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0700,39881_97083,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,F
+PD_0701,39882_97085,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,F
+PD_0702,39883_97087,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0703,39884_97089,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0704,39885_97090,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0705,39887_97093,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0706,39888_97094,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0707,39889_97096,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0708,39890_97098,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,F
+PD_0709,39891_97099,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0710,39893_97101,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,F
+PD_0711,39894_97103,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0712,39895_97105,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0713,39896_97106,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0714,39899_97113,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0715,39900_97114,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0716,39901_97115,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0717,39902_97118,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0718,39904_97122,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0719,39905_97123,Papio,hamadryas,"Filoha, Ethiopia",ca. N09.10802,ca. E040.01939,M
+PD_0720,39955_CK_01,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0721,39956_CK_02,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0722,39957_CK_05,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0723,39958_RY_01,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0724,39959_RY_15,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0725,39961_CK_03,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0726,39962_CK_04,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0727,39964_CK_06,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0728,39965_CK_07,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0729,39966_CM_01,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0730,39967_CM_02,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0731,39968_CM_03,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0732,39969_OP_01,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0733,39971_RY_02,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0734,39972_RY_03,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0735,39973_RY_04,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0736,39974_RY_05,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0737,39975_RY_07,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0738,39976_RY_08,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0739,39977_RY_09,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0740,39978_RY_10,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0741,39979_RY_11,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0742,39980_RY_12,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0743,39981_RY_13,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,M
+PD_0744,39984_RY_16,Papio,anubis,"Gog, Ethiopia",ca. N08.07397,ca. E034.17906,F
+PD_0745,16084_5012,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0746,16087_5015,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0747,16092_5021,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0748,16104_9004,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0749,34373_BZ11016,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0750,34374_BZ11017,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0751,34375_BZ11018,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0752,16049_3114,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0753,16103_7001,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0754,16071_4001,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0755,16075_4005,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0756,16080_5004,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0757,16082_5009,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0758,34424_BZ11072,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0759,34426_BZ11074,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0760,34427_BZ11075,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,F
+PD_0761,16169_IK02,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0762,16170_IK03,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0763,15972_KZ01,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0764,15973_KZ03,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0765,15974_KZ04,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0766,15975_KZ05,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0767,15977_KZ07,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0768,15978_KZ08,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0769,15989_1005,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0770,16059_3124,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0771,16002_2004,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0772,16006_2008,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0773,16008_2010,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0774,16035_3003,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,F
+PD_0775,16074_4004,Papio,cynocephalus,"Mikumi, Tanzania",ca. S07.30988,ca. E037.17853,M
+PD_0776,34376_BZ11019,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0777,34385_BZ11029,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0778,34390_BZ11034,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0779,34391_BZ11035,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0780,34393_BZ11037,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0781,34394_BZ11038,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,F
+PD_0782,34395_BZ11039,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0783,34396_BZ11040,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0784,34397_BZ11041,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0785,34407_BZ11053,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0786,34408_BZ11054,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0787,34410_BZ11057,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0788,34413_BZ11060,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,F
+PD_0789,34417_BZ11064,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,F
+PD_0790,34418_BZ11065,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,F
+PD_0791,34419_BZ11066,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,F
+PD_0792,34420_BZ11067,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,F
+PD_0793,34422_BZ11070,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
+PD_0794_BAB,34423_BZ11071,Papio,kindae,"Chunga, Zambia",ca. S15.05356,ca. E026.00521,M
