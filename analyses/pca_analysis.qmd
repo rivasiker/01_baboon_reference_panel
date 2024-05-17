@@ -1,0 +1,47 @@
+---
+title: "PCA"
+format: html
+editor: source
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r}
+
+library(tidyverse)
+
+path = "../steps/15_run_pca/robinson_2019.filtered"
+
+path = "../steps/15_run_pca/robinson_2019_and_kuderna_2023_NC_044995.1.filtered"
+
+pca <- read_table(paste0(path, ".eigenvec"), col_names = FALSE)
+eigenval <- scan(paste0(path, ".eigenval"))
+
+# sort out the pca data
+# remove nuisance column
+pca <- pca[,-1]
+# set names
+names(pca)[1] <- "ind"
+names(pca)[2:ncol(pca)] <- paste0("PC", 1:(ncol(pca)-1))
+
+```
+
+```{r}
+
+pve <- data.frame(PC = 1:length(eigenval), pve = eigenval/sum(eigenval)*100)
+a <- ggplot(pve, aes(PC, pve)) + geom_bar(stat = "identity")
+a + ylab("Percentage variance explained") + theme_light()
+
+```
+
+```{r}
+
+ggplot(pca) + 
+  geom_point(aes(PC2, PC1), shape = 21) + 
+  theme_light() +
+  coord_equal()
+
+```
+
+
+

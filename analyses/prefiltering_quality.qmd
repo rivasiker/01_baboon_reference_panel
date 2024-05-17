@@ -7,8 +7,11 @@ editor: source
 ```{r setup}
 
 library(tidyverse)
-path = '../steps/13_qc/robinson_2019'
-path = '../steps/14_qc_filtering/robinson_2019'
+study_name = "robinson_2019"
+# study_name = "robinson_2019_filtered"
+path = paste0('../steps/13_qc/', study_name)
+
+
 
 ```
 
@@ -34,6 +37,8 @@ var_qual |>
     x = "Phred score (log scale)",
     y = "Density"
   )
+
+ggsave(paste0("filtering_plots/", study_name, '_lqual.png'))
 
 ```
 
@@ -62,6 +67,8 @@ var_depth |>
     y = "Density"
   )
 
+ggsave(paste0("filtering_plots/", study_name, '_ldepth.png'))
+
 ```
 
 ```{r}
@@ -88,6 +95,8 @@ var_miss |>
     x = "Missingness",
     y = "Density"
   )
+
+ggsave(paste0("filtering_plots/", study_name, '_lmiss.png'))
 
 ```
 
@@ -123,6 +132,8 @@ var_freq |>
     y = "Density"
   )
 
+ggsave(paste0("filtering_plots/", study_name, '_frq.png'))
+
 ```
 
 ```{r}
@@ -148,6 +159,8 @@ ind_depth |>
     y = "Count"
   )
 
+ggsave(paste0("filtering_plots/", study_name, '_idepth.png'))
+
 ```
 
 ```{r}
@@ -172,6 +185,8 @@ ind_miss |>
     y = "Count"
   )
 
+ggsave(paste0("filtering_plots/", study_name, '_imiss.png'))
+
 ```
 
 ```{r}
@@ -194,5 +209,7 @@ ind_het |> ggplot(aes(f)) +
     x = "Inbreeding coefficient",
     y = "Count"
   )
+
+ggsave(paste0("filtering_plots/", study_name, '_het.png'))
 
 ```

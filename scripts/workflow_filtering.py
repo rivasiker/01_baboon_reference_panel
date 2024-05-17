@@ -181,8 +181,19 @@ for study_name in study_name_list:
 
     perform_qc(outfile, done, infile, done_prev, study_name)
 
-    
-    
+study_name_list = ["robinson_2019_and_kuderna_2023"]
+chr = 'NC_044995.1'    
+for study_name in study_name_list:
+    outfile_prexif = "../steps/13_qc"
+    done_prexif = "../done/13_qc"
+    infile = f"../steps/11_final_vcf/{study_name}/{chr}.combined.vcf.gz"
+    done_prev = f"../done/11_final_vcf/done_{study_name}_{chr}"
+    # infile = f"../steps/11_final_vcf/kuderna_2023/{study_name}.vcf.gz"
+    # done_prev = f"../done/11_final_vcf/done_kuderna_2023_NC_044995.1"
+    outfile = f"{outfile_prexif}/{study_name}_{chr}"
+    done = f"{done_prexif}/{study_name}_{chr}"
+
+    perform_qc(outfile, done, infile, done_prev, study_name)
 
 ######################################################################################
 #################################---- FILTERING ----##################################
@@ -233,6 +244,32 @@ for study_name in study_name_list:
                 max_depth = max_depth
                 )
             )
+    
+study_name_list = ["robinson_2019_and_kuderna_2023"]
+chr = 'NC_044995.1'
+
+for study_name in study_name_list:
+
+    outfile_prexif = "../steps/14_qc_filtering"
+    done_prexif = "../done/14_qc_filtering"
+    done_prexif_prev = "../done/13_qc"
+    infile = f"../steps/11_final_vcf/{study_name}/{chr}.combined.vcf.gz"
+    done_prev = [f"{done_prexif_prev}/{study_name}_{chr}_{i}" for i in ["frq", "idepth.mean", "ldepth.mean", "lqual", "imiss", "lmiss", "het"]]
+
+    gwf.target_from_template(
+            f"{study_name}_qc_filtering",
+            qc_filtering(
+                infile = infile, 
+                outfile = f"{outfile_prexif}/{study_name}_{chr}", 
+                done = f"{done_prexif}/{study_name}_{chr}", 
+                done_prev = done_prev,
+                maf = maf,
+                miss = miss,
+                qual = qual,
+                min_depth = min_depth,
+                max_depth = max_depth
+                )
+            )
 
 
 ############################################################################################################
@@ -255,3 +292,54 @@ for study_name in study_name_list:
     done = f"{done_prexif}/{study_name}_filtered"
 
     perform_qc(outfile, done, infile, done_prev, study_name+"_filtered")
+
+
+################################################################################
+#################################---- PCA ----##################################
+################################################################################
+
+def run_pca(infile, done, done_prev, study_name):
+    """Calculate heterozygosity and inbreeding coefficient per individual."""
+    inputs = [infile, done_prev]
+    outputs = [study_name+".prune.in", study_name+".eigenval", study_name+".eigenvec", 
+               study_name+".bed", study_name+".bim", study_name+".fam", 
+               done]
+    options = {'cores': 1, 'memory': '20g', 'walltime': "12:00:00"}
+    spec = f"""
+        plink --vcf {infile} --double-id --allow-extra-chr --set-missing-var-ids @:# \
+            --indep-pairwise 50 10 0.1 --out {study_name}
+        plink --vcf {infile} --double-id --allow-extra-chr --set-missing-var-ids @:# \
+            --extract {study_name}.prune.in \
+            --make-bed --pca --out {study_name}
+        touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+# study_name_list = ["NC_044995.1.combined"]
+study_name_list = ["robinson_2019"]
+for s in study_name_list:
+    study_name = s+".filtered"
+    gwf.target_from_template(
+            f"{study_name}_filtered_run_pca",
+            run_pca(
+                infile = f"../steps/14_qc_filtering/{study_name}.vcf.gz", 
+                done = f"../done/15_run_pca/{study_name}", 
+                done_prev = f"../done/14_qc_filtering/{s}",
+                study_name = f"../steps/15_run_pca/{study_name}"
+                )
+            )
+    
+
+study_name_list = ["robinson_2019_and_kuderna_2023"]
+chr = 'NC_044995.1'
+for s in study_name_list:
+    study_name = f"{s}_{chr}.filtered"
+    gwf.target_from_template(
+            f"{study_name}_run_pca",
+            run_pca(
+                infile = f"../steps/14_qc_filtering/{study_name}.vcf.gz", 
+                done = f"../done/15_run_pca/{study_name}", 
+                done_prev = f"../done/14_qc_filtering/{s}_{chr}",
+                study_name = f"../steps/15_run_pca/{study_name}"
+                )
+            )
