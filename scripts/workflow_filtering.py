@@ -86,6 +86,40 @@ def het_and_inbred_per_individual(infile, outfile, done, done_prev):
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
 
+def hardy_weinberg(infile, outfile, done, done_prev):
+    """Calculate heterozygosity and inbreeding coefficient per individual."""
+    inputs = [infile, done_prev]
+    outputs = [outfile+".hwe", done]
+    options = {'cores': 1, 'memory': '20g', 'walltime': "12:00:00"}
+    spec = f"""
+        vcftools --gzvcf {infile} --hardy --out {outfile}
+        touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+def relatedness2(infile, outfile, done, done_prev):
+    """Calculate kinship matrix."""
+    inputs = [infile, done_prev]
+    outputs = [outfile+".relatedness2", done]
+    options = {'cores': 1, 'memory': '20g', 'walltime': "12:00:00"}
+    spec = f"""
+        vcftools --gzvcf {infile} --relatedness2 --out {outfile}
+        touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+def relatedness(infile, outfile, done, done_prev):
+    """Calculate kinship matrix."""
+    inputs = [infile, done_prev]
+    outputs = [outfile+".relatedness", done]
+    options = {'cores': 1, 'memory': '20g', 'walltime': "12:00:00"}
+    spec = f"""
+        vcftools --gzvcf {infile} --relatedness --out {outfile}
+        touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+
+
 def perform_qc(outfile, done, infile, done_prev, jobname):
     gwf.target_from_template(
         f"{jobname}_allele_frequency",
@@ -157,6 +191,36 @@ def perform_qc(outfile, done, infile, done_prev, jobname):
             )
         )
 
+    gwf.target_from_template(
+        f"{jobname}_hardy_weinberg",
+        hardy_weinberg(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_hwe", 
+            done_prev = done_prev
+            )
+        )
+    
+    gwf.target_from_template(
+        f"{jobname}_relatedness",
+        relatedness(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_relatedness", 
+            done_prev = done_prev
+            )
+        )
+
+    gwf.target_from_template(
+        f"{jobname}_relatedness2",
+        relatedness2(
+            infile = infile, 
+            outfile = f"{outfile}", 
+            done = f"{done}_relatedness2", 
+            done_prev = done_prev
+            )
+        )
+
 
 
 
@@ -181,7 +245,7 @@ for study_name in study_name_list:
 
     perform_qc(outfile, done, infile, done_prev, study_name)
 
-study_name_list = ["robinson_2019_and_kuderna_2023"]
+study_name_list = ["robinson_2019_and_kuderna_2023", "amboseli_all"]
 chr = 'NC_044995.1'    
 for study_name in study_name_list:
     outfile_prexif = "../steps/13_qc"
@@ -245,7 +309,7 @@ for study_name in study_name_list:
                 )
             )
     
-study_name_list = ["robinson_2019_and_kuderna_2023"]
+study_name_list = ["robinson_2019_and_kuderna_2023", "amboseli_all"]
 chr = 'NC_044995.1'
 
 for study_name in study_name_list:
@@ -277,21 +341,26 @@ for study_name in study_name_list:
 ############################################################################################################
 
 
-# study_name_list = ["NC_044995.1.combined"]
 study_name_list = ["robinson_2019"]
-
 for study_name in study_name_list:
-
     outfile_prexif = "../steps/13_qc"
     done_prexif = "../done/13_qc"
     infile = f"../steps/14_qc_filtering/{study_name}.filtered.vcf.gz"
     done_prev = f"../done/14_qc_filtering/{study_name}"
-    # infile = f"../steps/11_final_vcf/kuderna_2023/{study_name}.vcf.gz"
-    # done_prev = f"../done/11_final_vcf/done_kuderna_2023_NC_044995.1"
     outfile = f"{outfile_prexif}/{study_name}_filtered"
     done = f"{done_prexif}/{study_name}_filtered"
-
     perform_qc(outfile, done, infile, done_prev, study_name+"_filtered")
+
+# study_name_list = ["robinson_2019_and_kuderna_2023", "amboseli_all"]
+# chrom = "NC_044995.1"
+# for study_name in study_name_list:
+#     outfile_prexif = "../steps/13_qc"
+#     done_prexif = "../done/13_qc"
+#     infile = f"../steps/11_final_vcf/{study_name}/{chrom}.combined.vcf.gz"
+#     done_prev = f"../done/11_final_vcf/done_{study_name}_{chrom}"
+#     outfile = f"{outfile_prexif}/{study_name}_{chrom}_filtered"
+#     done = f"{done_prexif}/{study_name}_{chrom}_filtered"
+#     perform_qc(outfile, done, infile, done_prev, study_name+"_filtered")
 
 
 ################################################################################
@@ -341,5 +410,19 @@ for s in study_name_list:
                 done = f"../done/15_run_pca/{study_name}", 
                 done_prev = f"../done/14_qc_filtering/{s}_{chr}",
                 study_name = f"../steps/15_run_pca/{study_name}"
+                )
+            )
+
+
+study_name_list = ["amboseli_all"]
+chr = 'NC_044995.1'
+for study_name in study_name_list:
+    gwf.target_from_template(
+            f"{study_name}_run_pca_unfiltered",
+            run_pca(
+                infile = f"../steps/11_final_vcf/{study_name}/{chr}.combined.vcf.gz", 
+                done = f"../done/15_run_pca/{study_name}_unfiltered", 
+                done_prev = f"../done/14_qc_filtering/{study_name}_{chr}",
+                study_name = f"../steps/15_run_pca/{study_name}_unfiltered"
                 )
             )

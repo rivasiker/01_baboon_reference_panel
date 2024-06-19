@@ -1,17 +1,18 @@
 ---
 title: "qc_test"
-format: html
+format: 
+  html:
+    standalone: true
 editor: source
 ---
 
 ```{r setup}
 
 library(tidyverse)
-study_name = "robinson_2019"
+study_name = "robinson_2019_and_kuderna_2023_NC_044995.1"
+# study_name = "amboseli_all_NC_044995.1"
 # study_name = "robinson_2019_filtered"
 path = paste0('../steps/13_qc/', study_name)
-
-
 
 ```
 
@@ -213,3 +214,219 @@ ind_het |> ggplot(aes(f)) +
 ggsave(paste0("filtering_plots/", study_name, '_het.png'))
 
 ```
+## Hardy-Weinberg equilibrium
+
+```{r}
+
+hwe_tab <- read_delim(
+  paste0(path, ".hwe"),
+  delim = "\t",
+  # col_names = c("chr", "pos", "qual"),
+  # skip = 1,
+  show_col_types = FALSE
+) |> 
+  sample_frac(0.1) |> 
+  separate(
+    `OBS(HOM1/HET/HOM2)`, 
+    c("HOM1", "HET", "HOM2")
+  ) |> 
+  mutate(
+    HOM1 = as.integer(HOM1),
+    HET = as.integer(HET),
+    HOM2 = as.integer(HOM2),
+    p1 = (HOM1*2+HET)/(HOM1*2+HET*2+HOM2*2),
+    p2 = (HOM2*2+HET)/(HOM1*2+HET*2+HOM2*2),
+    het = HET/(HOM1+HOM2+HET)
+  )
+
+hwe_tab
+
+```
+
+```{r}
+
+set.seed(0)
+hwe_tab |> 
+  select(CHR, POS, p1, p2, het, P_HWE) |> 
+  mutate(
+    p = abs(sample(c(0, 1), n(), replace = T)-p1)
+  ) |> 
+  ggplot() +
+  geom_point(
+    aes(p1, het, fill = P_HWE<=0.01),
+    shape = 21, size = 2, alpha=0.2
+  ) +
+  theme_classic() +
+  labs(title = "Hardy-Weinberg equilibrium")
+
+ggsave(paste0("filtering_plots/", study_name, '_hwe.png'))
+
+```
+
+
+```{r}
+
+read_delim(
+  paste0(path, ".hwe"),
+  delim = "\t",
+  # col_names = c("chr", "pos", "qual"),
+  # skip = 1,
+  show_col_types = FALSE
+) |> 
+  group_by(P_HWE<=0.01) |> 
+  tally() |> 
+  ungroup() |> 
+  mutate(
+    p = n/sum(n)
+  )
+
+```
+
+## Relatedness
+
+The default kinship coefficient estimation only involves the use of SNP data from this pair of individuals, and the inference is robust to population structure. A negative kinship coefficient estimation indicates an unrelated relationship. The reason that a negative kinship coefficient is not set to zero is a very negative value may indicate the population structure between the two individuals. Close relatives can be inferred fairly reliably based on the estimated kinship coefficients as shown in the following simple algorithm: an estimated kinship coefficient range >0.354, [0.177, 0.354], [0.0884, 0.177] and [0.0442, 0.0884] corresponds to duplicate/MZ twin, 1st-degree, 2nd-degree, and 3rd-degree relationships respectively.
+
+```{r fig.height=10, fig.width=10}
+
+tab_relatedness <- read_delim(
+  # paste0(path, ".relatedness2"),
+  # '../steps/13_qc/amboseli_all_NC_044995.1.relatedness2',
+  '../steps/13_qc/robinson_2019_and_kuderna_2023_NC_044995.1.relatedness2',
+  delim = "\t",
+  show_col_types = FALSE
+)
+
+tab_relatedness |> 
+  # One of the kinda baboons is an outlier
+  filter(INDV1 != "SAMEA112483262", INDV2 != "SAMEA112483262") |>
+  # The gelada is an outlier
+  filter(INDV1 != "SAMEA112482860", INDV2 != "SAMEA112482860") |>
+  ggplot() +
+  geom_tile(aes(INDV1, INDV2, fill = RELATEDNESS_PHI, color = RELATEDNESS_PHI)) +
+  scale_fill_viridis_c() +
+  scale_color_viridis_c() +
+  coord_fixed()
+
+```
+
+```{r fig.height=20, fig.width=20}
+
+tab_relatedness <- read_delim(
+  # paste0(path, ".relatedness2"),
+  '../steps/13_qc/amboseli_all_NC_044995.1.relatedness',
+  # '../steps/13_qc/robinson_2019_and_kuderna_2023_NC_044995.1.relatedness',
+  delim = "\t",
+  show_col_types = FALSE
+)
+
+tab_relatedness |> 
+  # One of the kinda baboons is an outlier
+  filter(INDV1 != "SAMEA112483262", INDV2 != "SAMEA112483262") |>
+  # The gelada is an outlier
+  filter(INDV1 != "SAMEA112482860", INDV2 != "SAMEA112482860") |>
+  ggplot() +
+  geom_tile(aes(INDV1, INDV2, fill = RELATEDNESS_AJK, color = RELATEDNESS_AJK)) +
+  scale_fill_viridis_c() +
+  scale_color_viridis_c() +
+  coord_fixed()
+
+ggsave(paste0("filtering_plots/", study_name, '_relatedness.png'))
+
+```
+
+
+
+
+## Mapped reads
+
+```{r}
+
+read_tab <- tibble(
+  individual = ind_depth$ind,
+  mapped_sorted_bam_all_reads = NA,
+  mapped_sorted_bam_mapped_reads = NA,
+  # mapped_nodupes_bam_all_reads = NA,
+  # mapped_nodupes_bam_mapped_reads = NA,
+  mapped_nodupes_renamed_bam_all_reads = NA,
+  mapped_nodupes_renamed_bam_mapped_reads = NA
+)
+
+for (i in 1:length(ind_depth$ind)) {
+  read_tab[i,2] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.sorted.bam.all_reads.txt"), quiet = TRUE)
+  read_tab[i,3] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.sorted.bam.mapped_reads.txt"), quiet = TRUE)
+  # read_tab[i,4] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.bam.all_reads.txt"), quiet = TRUE)
+  # read_tab[i,5] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.bam.mapped_reads.txt"), quiet = TRUE)
+  read_tab[i,4] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.renamed.bam.all_reads.txt"), quiet = TRUE)
+  read_tab[i,5] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.renamed.bam.mapped_reads.txt"), quiet = TRUE)
+}
+
+
+```
+
+```{r fig.height=40, fig.width=10}
+
+read_tab |> 
+  transmute(
+    individual,
+    mapped_frac = mapped_sorted_bam_mapped_reads/mapped_sorted_bam_all_reads,
+    mapped_frac_nodupes = mapped_nodupes_renamed_bam_mapped_reads/mapped_nodupes_renamed_bam_all_reads
+  ) |> 
+  arrange(mapped_frac) |>
+  mutate(
+    individual = factor(individual, individual)
+  ) |> 
+  pivot_longer(-individual) |> 
+  ggplot() +
+  geom_col(aes(individual, value, fill = name), 
+           width=.5, position = "dodge") +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Proportion of mapped reads before and after duplicate removal")
+
+ggsave(paste0("filtering_plots/", study_name, '_read_count.png'))
+
+```
+
+```{r fig.height=40, fig.width=10}
+
+read_tab |> 
+  transmute(
+    individual,
+    diff = mapped_sorted_bam_mapped_reads-mapped_nodupes_renamed_bam_mapped_reads,
+    post_duplicate_removal = mapped_sorted_bam_mapped_reads-diff,
+    pre_duplicate_removal = diff
+    ) |> 
+  select(-diff) |> 
+  arrange(pre_duplicate_removal + post_duplicate_removal) |>
+  mutate(
+    individual = factor(individual, individual)
+  ) |> 
+  pivot_longer(-individual) |> 
+  mutate(
+    name = factor(name, c("pre_duplicate_removal", "post_duplicate_removal"))
+  ) |> 
+  ggplot() +
+  geom_col(aes(individual, value, fill = name)) +
+  coord_flip() +
+  theme_minimal() +
+  labs(title = "Number of reads")
+
+ggsave(paste0("filtering_plots/", study_name, '_read_count_2.png'))
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

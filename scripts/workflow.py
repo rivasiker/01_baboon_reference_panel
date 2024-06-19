@@ -221,7 +221,7 @@ def rename_merged_bam(infile, outfile, done, done_prev):
         samtools index {outfile}
         touch {done}
     """
-    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec, protect=outputs)
 
 
 
@@ -262,9 +262,9 @@ def combine_gvcfs(infiles, chr, workpath, done, done_prev):
     variants = ''.join([f'-V {i} ' for i in infiles])
     inputs = done_prev + infiles
     outputs = [done, workpath]
-    options = {'cores': 1, 'memory': "32g", 'walltime': "UNLIMITED"}
+    options = {'cores': 1, 'memory': "100g", 'walltime': "UNLIMITED"}
     spec = f"""
-        /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk --java-options "-Xmx28g -Xms28g" GenomicsDBImport {variants} --genomicsdb-workspace-path {workpath} -L {chr}
+        /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk --java-options "-Xmx90g -Xms90g" GenomicsDBImport {variants} --genomicsdb-workspace-path {workpath} -L {chr}
         touch {done}
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
@@ -274,9 +274,9 @@ def update_genomicsdb(infiles, workpath, done, done_prev):
     variants = ''.join([f'-V {i} ' for i in infiles])
     inputs = [done_prev] + infiles
     outputs = [done]
-    options = {'cores': 1, 'memory': "32g", 'walltime': "UNLIMITED"}
+    options = {'cores': 1, 'memory': "100g", 'walltime': "UNLIMITED"}
     spec = f"""
-        /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk --java-options "-Xmx28g -Xms28g" GenomicsDBImport {variants} --genomicsdb-update-workspace-path {workpath}
+        /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk --java-options "-Xmx90g -Xms90g" GenomicsDBImport {variants} --genomicsdb-update-workspace-path {workpath}
         touch {done}
     """
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
@@ -326,3 +326,28 @@ def concatenate_vcfs(infiles, outfile, done, done_prev):
     return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
 
 
+##############################################################################################
+#################################---- COUNT MAPPED READS ----#################################
+##############################################################################################
+
+def count_all_reads(infile, outfile, done, done_prev):
+    """Count all reads."""
+    inputs = [done_prev, infile]
+    outputs = [done, outfile]
+    options = {'cores': 1, 'memory': "16g", 'walltime': "UNLIMITED"}
+    spec = f"""
+    samtools view -c {infile} > {outfile}
+    touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec, protect=outputs)
+
+def count_mapped_reads(infile, outfile, done, done_prev):
+    """Count mapped (primary aligned) reads."""
+    inputs = [done_prev, infile]
+    outputs = [done, outfile]
+    options = {'cores': 1, 'memory': "16g", 'walltime': "UNLIMITED"}
+    spec = f"""
+    samtools view -c -F 260 {infile} > {outfile}
+    touch {done}
+    """
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec, protect=outputs)

@@ -8,6 +8,23 @@ editor_options:
 
 ```{r}
 
+sorensen_s1 <- read_csv("../metadata/sorensen_table_s1.csv") |> 
+  rename(sample_alias = `Seq-ID`)
+
+sorensen_ena <- read_tsv('../metadata/PRJEB59576_Kuderna_2023.txt') |> 
+  filter(str_detect(scientific_name, 'Papio') | str_detect(scientific_name, 'gelada')) |> 
+  group_by(sample_alias, sample_accession) |> 
+  summarise(
+    n = n()) 
+
+sorensen_total <- full_join(sorensen_s1, sorensen_ena, by = "sample_alias") |>
+  rename(ind = sample_accession)
+
+```
+
+
+```{r}
+
 library(tidyverse)
 
 path = "../steps/15_run_pca/robinson_2019.filtered"
@@ -24,6 +41,9 @@ pca <- pca[,-1]
 names(pca)[1] <- "ind"
 names(pca)[2:ncol(pca)] <- paste0("PC", 1:(ncol(pca)-1))
 
+pca <- pca |> 
+  full_join(sorensen_total, by = "ind")
+
 ```
 
 ```{r}
@@ -34,12 +54,57 @@ a + ylab("Percentage variance explained") + theme_light()
 
 ```
 
-```{r}
+```{r fig.height=8, fig.width=10}
+
+names <- pca |> 
+  group_by(Genus, Species) |> 
+  summarise(
+    PC1 = max(PC1),
+    PC2 = mean(PC2)
+  ) |> 
+  drop_na()
 
 ggplot(pca) + 
-  geom_point(aes(PC2, PC1), shape = 21) + 
-  theme_light() +
-  coord_equal()
+  geom_point(aes(PC2, PC1, color = paste(Genus, Species)), shape = 21) + 
+  geom_text(aes(PC2, PC1, color = paste(Genus, Species), label = paste(Genus, Species)), data = names) +
+  theme_light() 
+
+```
+
+```{r fig.height=10, fig.width=14}
+
+names <- pca |> 
+  group_by(Origin) |> 
+  summarise(
+    PC1 = min(PC1),
+    PC2 = mean(PC2)
+  ) |> 
+  drop_na()
+
+ggplot(pca) + 
+  geom_point(aes(PC2, PC1, color = Origin), shape = 21) + 
+  geom_text(aes(PC2, PC1, color = Origin, label = Origin), data = names) +
+  theme_light() 
+
+```
+
+```{r fig.height=10, fig.width=14}
+
+names <- pca |> 
+  filter(Species %in% c("anubis", "cynocephalus") | is.na(Species)) |> 
+  group_by(Origin) |> 
+  summarise(
+    PC1 = min(PC1),
+    PC2 = mean(PC2)
+  ) |> 
+  drop_na()
+
+pca |> 
+  filter(Species %in% c("anubis", "cynocephalus") | is.na(Species)) |> 
+  ggplot() + 
+  geom_point(aes(PC2, PC1, color = Origin), shape = 21) + 
+  geom_text(aes(PC2, PC1, color = Origin, label = Origin), data = names) +
+  theme_light() 
 
 ```
 

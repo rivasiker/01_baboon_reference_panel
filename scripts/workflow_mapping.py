@@ -26,17 +26,24 @@ chr_lst = [
     "NC_044997.1", "NC_020006.2"
 ]
 
+chr_lst = ["NC_044995.1"]
+
 # chr_lst = ["NC_018169.2", "NC_018170.2"]
 # sample_list = ['ERR10942715', 'ERR10942717', 'ERR10942719', 'ERR10942720', 'ERR10942721']
 # path_to_samples = "../../../../shared_data/sequencing_data/baboon_other_studies/kuderna_2023/"
 
 study_name_list = ["kuderna_2023", "robinson_2019", "vilgalys_fogel_2022"]
+study_name_list = ["kuderna_2023", "robinson_2019"]
 study_name_list = ["vilgalys_fogel_2022"]
 # acc_lim = 500
 
 for study_name in study_name_list:
 
     individual_list = ["SAMN10524564", "SAMN10524546", "SAMN10524552", "SAMN10524565", "SAMN10524554", "SAMN10524539", "SAMN10524543", "SAMN10524555", "SAMN10524547", "SAMN10524550", "SAMN10524563", "SAMN10524560", "SAMN10524551", "SAMN10524559", "SAMN11119509", "SAMN10524549", "SAMN10524562", "SAMN10524548", "SAMN11119508", "SAMN10524566", "SAMN11119507", "SAMN10524544", "SAMN09761236", "SAMN10524567", "SAMN10524561", "SAMN10524540", "SAMN10524545", "SAMN10524541", "SAMN10524556", "SAMN10524558", "SAMN10524542"]
+    # individual_list = ['SAMN11119506', 'SAMN09742522', 'SAMN09742523', 'SAMN09742524', 'SAMN09710567', 'SAMN11119513', 'SAMN09710569', 'SAMN08519680', 'SAMN09742526', 'SAMN09742527', 'SAMN09710571', 'SAMN09742528', 'SAMN09710572', 'SAMN09710573', 'SAMN09742529', 'SAMN09742530', 'SAMN09710574', 'SAMN09710575', 'SAMN09710576', 'SAMN09710577', 'SAMN09742531', 'SAMN09710578', 'SAMN09742532', 'SAMN09710579', 'SAMN09761229', 'SAMN12703524', 'SAMN09710580', 'SAMN09710581', 'SAMN09742533', 'SAMN09742534', 'SAMN09761230', 
+    #                    'SAMN12703525', 'SAMN09761231', 'SAMN09761232', 'SAMN11119510', 'SAMN09742535', 'SAMN12703528', 'SAMN09761233', 'SAMN09742536', 'SAMN09761234', 'SAMN10524552', 'SAMN10524565', 'SAMN10524554', 'SAMN10524539', 'SAMN10524543', 'SAMN10524555', 'SAMN10524547', 'SAMN10524550', 'SAMN10524563', 'SAMN10524553', 'SAMN10524560', 'SAMN10524551', 'SAMN10524559', 'SAMN11119509', 'SAMN10524549', 'SAMN10524562', 'SAMN10524548', 'SAMN11119508', 'SAMN10524566', 'SAMN11119507', 'SAMN10524544', 'SAMN09761236', 
+    #                    'SAMN10524567', 'SAMN10524561', 'SAMN10524540', 'SAMN10524545', 'SAMN09742537', 'SAMN10524541', 'SAMN09710582', 'SAMN10524556', 'SAMN10524558', 'SAMN10524542', 'SAMN09710583', 'SAMN09742538', 'SAMN09710584', 'SAMN09710585', 'SAMN09742539', 'SAMN09742540', 'SAMN10524557', 'SAMN09710586', 'SAMN09742541', 'SAMN10524564', 'SAMN10524546', 'SAMN09742542', 'SAMN09742543', 'SAMN12703534', 'SAMN11119511', 'SAMN09742544', 'SAMN11119512', 'SAMN09742545', 'SAMN10524536', 'SAMN09742546', 'SAMN10524537', 
+    #                    'SAMN09742547', 'SAMN09710587', 'SAMN09710588', 'SAMN09742548', 'SAMN09742549', 'SAMN09710589', 'SAMN09710590', 'SAMN09710591', 'SAMN09742550', 'SAMN09742551', 'SAMN09742552', 'SAMN11119514', 'SAMN09742553']
     path_to_samples = f"/mnt/primevo/shared_data/sequencing_data/baboon_other_studies/{study_name}"
 
     dct = {}
@@ -65,7 +72,7 @@ for study_name in study_name_list:
     # for individual in individual_list:
         # print(individual)
         # if acc == n_sample: break
-        # if os.path.exists(f"../done/07_get_coverage/{individual}"): continue
+        if os.path.exists(f"../done/16_count_reads/{individual}.mapped.nodupes.renamed.bam.mapped_reads.txt"): continue
         # acc += 1
         for sample_name in dct[individual]:
             # if not os.path.exists(f'{path_to_samples}/{sample_name}_1.fastq.gz'): continue
@@ -156,46 +163,71 @@ for study_name in study_name_list:
                 done_prev = f"../done/06_mark_and_remove_duplicates/{individual}"
                 )
             )
+
+        intermediate_bams = [
+            f"../steps/05_merge_bams/{individual}.mapped.sorted.bam",
+            # f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
+            f"../steps/08_rename_merged_bam/{individual}.mapped.nodupes.renamed.bam"
+            ]
+        for bam in intermediate_bams:
+            gwf.target_from_template(
+                f"{bam.split("/")[-1]}_count_all_reads",
+                count_all_reads(
+                    infile = bam,
+                    outfile = f"../steps/16_count_reads/{bam.split("/")[-1]}.all_reads.txt",
+                    done = f"../done/16_count_reads/{bam.split("/")[-1]}.all_reads",
+                    done_prev = f"{"/".join(bam.split("/")[0:-1]).replace("steps", "done")}/{individual}"
+                    )
+                )
+            gwf.target_from_template(
+                f"{bam.split("/")[-1]}_count_mapped_reads",
+                count_mapped_reads(
+                    infile = bam,
+                    outfile = f"../steps/16_count_reads/{bam.split("/")[-1]}.mapped_reads.txt",
+                    done = f"../done/16_count_reads/{bam.split("/")[-1]}.mapped_reads",
+                    done_prev = f"{"/".join(bam.split("/")[0:-1]).replace("steps", "done")}/{individual}"
+                    )
+                )
         
         # if acc == acc_lim: break
 
 
 
-# acc_lim = 500
-for study_name in study_name_list:
+# # acc_lim = 500
+# for study_name in study_name_list:
 
-    individual_list = ["SAMN10524564", "SAMN10524546", "SAMN10524552", "SAMN10524565", "SAMN10524554", "SAMN10524539", "SAMN10524543", "SAMN10524555", "SAMN10524547", "SAMN10524550", "SAMN10524563", "SAMN10524560", "SAMN10524551", "SAMN10524559", "SAMN11119509", "SAMN10524549", "SAMN10524562", "SAMN10524548", "SAMN11119508", "SAMN10524566", "SAMN11119507", "SAMN10524544", "SAMN09761236", "SAMN10524567", "SAMN10524561", "SAMN10524540", "SAMN10524545", "SAMN10524541", "SAMN10524556", "SAMN10524558", "SAMN10524542"]
-    path_to_samples = f"../../../../shared_data/sequencing_data/baboon_other_studies/{study_name}"
-    dct = {}
-    acc = 0
-    with open(f"../metadata/sample_names_{study_name}.tsv") as file:
-        for line in file:
-            if acc == 0: 
-                acc = 1
-                continue
-            line = line.rstrip().split("\t")
-            if (study_name == "robinson_2019") and (line[1] not in individual_list):
-                continue
-            if line[1] not in dct: 
-                dct[line[1]] = [line[3]]
-            else: 
-                dct[line[1]].append(line[3])
-    # acc = 0
-    for individual in list(dct.keys()):
-        # if not os.path.exists(f"../done/08_rename_merged_bam/{individual}"): continue
-        # acc += 1
-        for chr in chr_lst:
-            # if os.path.exists(f"../done/09_call_variants/{individual}_{chr}"): continue
-            gwf.target_from_template(
-                f"{individual}_{chr}_call_variants", 
-                call_variants_per_chromosome(
-                    chr = chr,
-                    ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
-                    infile = f"../steps/08_rename_merged_bam/{individual}.mapped.nodupes.renamed.bam",
-                    outfile = f"../steps/09_call_variants/{individual}_{chr}.g.vcf.gz",
-                    done = f"../done/09_call_variants/{individual}_{chr}",
-                    done_prev = [f"../done/07_get_coverage/{individual}", f"../done/08_rename_merged_bam/{individual}"]
-                    )
-                )
-        # if acc == acc_lim: break
+#     individual_list = ["SAMN10524564", "SAMN10524546", "SAMN10524552", "SAMN10524565", "SAMN10524554", "SAMN10524539", "SAMN10524543", "SAMN10524555", "SAMN10524547", "SAMN10524550", "SAMN10524563", "SAMN10524560", "SAMN10524551", "SAMN10524559", "SAMN11119509", "SAMN10524549", "SAMN10524562", "SAMN10524548", "SAMN11119508", "SAMN10524566", "SAMN11119507", "SAMN10524544", "SAMN09761236", "SAMN10524567", "SAMN10524561", "SAMN10524540", "SAMN10524545", "SAMN10524541", "SAMN10524556", "SAMN10524558", "SAMN10524542"]
+#     path_to_samples = f"../../../../shared_data/sequencing_data/baboon_other_studies/{study_name}"
+#     dct = {}
+#     acc = 0
+#     with open(f"../metadata/sample_names_{study_name}.tsv") as file:
+#         for line in file:
+#             if acc == 0: 
+#                 acc = 1
+#                 continue
+#             line = line.rstrip().split("\t")
+#             if (study_name == "robinson_2019") and (line[1] not in individual_list):
+#                 continue
+#             if line[1] not in dct: 
+#                 dct[line[1]] = [line[3]]
+#             else: 
+#                 dct[line[1]].append(line[3])
+#     # acc = 0
+#     for individual in list(dct.keys()):
+#         # if not os.path.exists(f"../done/08_rename_merged_bam/{individual}"): continue
+#         # acc += 1
+#         for chr in chr_lst:
+#             # if os.path.exists(f"../done/09_call_variants/{individual}_{chr}"): continue
+#             gwf.target_from_template(
+#                 f"{individual}_{chr}_call_variants", 
+#                 call_variants_per_chromosome(
+#                     chr = chr,
+#                     ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+#                     infile = f"../steps/08_rename_merged_bam/{individual}.mapped.nodupes.renamed.bam",
+#                     outfile = f"../steps/09_call_variants/{individual}_{chr}.g.vcf.gz",
+#                     done = f"../done/09_call_variants/{individual}_{chr}",
+#                     done_prev = [f"../done/07_get_coverage/{individual}", f"../done/08_rename_merged_bam/{individual}"]
+#                     )
+#                 )
+#         # if acc == acc_lim: break
             
