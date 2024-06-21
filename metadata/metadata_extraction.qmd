@@ -97,15 +97,7 @@ lst
 Robinson <- read_tsv('PRJNA433868_Robinson_2019.txt') 
 
 Robinson |> 
-  group_by(sample_alias) |> 
-  summarise(
-    n = n()
-    ) |> 
-  ungroup() |> 
-  filter(sample_alias %in% lst) 
-
-Robinson |> 
-  group_by(scientific_name, sample_alias) |> 
+  group_by(scientific_name, sample_alias, sample_accession) |> 
   summarise(
     n = n()) |> 
   group_by(scientific_name) |> 
@@ -131,6 +123,33 @@ shuyu_list %in% Robinson$sample_accession
 ```
 
 All of the samples are found.
+
+```{r}
+
+only_100 <- Robinson |> 
+  group_by(sample_alias, sample_accession) |> 
+  summarise(
+    n = n()
+    ) |> 
+  ungroup() |> 
+  filter(sample_alias %in% lst) 
+
+paste(only_100$sample_accession, collapse = "', '")
+
+```
+
+```{r}
+
+Robinson |> 
+  group_by(sample_alias, sample_accession) |> 
+  sample_n(1) |> 
+  ungroup() |> 
+  select(sample_alias, sample_accession) |> 
+  write_csv('robinson_sampleAlias_to_sampleAccession.csv')
+
+```
+
+
 
 # Rogers et al. 2019
 
@@ -498,6 +517,14 @@ total_table <- bind_rows(prev, new) |>
 total_table  |> 
   write_csv('Amboseli_gDNA_fDNA_stats_20240319.csv')
 
+total_table |> 
+  group_by(n) |> 
+  tally()
+
+sum(new$sname %in% prev$sname)
+
+read_csv('newly_sequenced_baboons_coverage.csv') |> 
+  filter(sname == "WAJ")
 
 ```
 
