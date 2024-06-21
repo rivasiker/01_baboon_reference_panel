@@ -1,6 +1,7 @@
 from gwf import Workflow, AnonymousTarget
-import os
 from workflow import *
+from os import listdir
+from os.path import isfile, join
 
 gwf = Workflow()
 
@@ -124,3 +125,74 @@ for chr in chr_lst:
     #             )
     #         )
     
+
+study_name = "vilgalys_fogel_2022"
+
+path_to_samples = f"../../../../shared_data/sequencing_data/baboon_other_studies/{study_name}"
+
+# For the old samples
+
+dct = {}
+acc = 0
+with open(f"../metadata/sample_names_{study_name}.tsv") as file:
+    for line in file:
+        if acc == 0:
+            acc = 1
+            continue
+        line = line.rstrip().split("\t")
+        if (study_name == "robinson_2019") and (line[1] not in individual_list):
+            continue
+        if line[1] not in dct:
+            dct[line[1]] = [line[3]]
+        else:
+            dct[line[1]].append(line[3])
+
+# For the newly generated
+
+onlyfiles = []
+filepaths = []
+for filepath in ['/mnt/primevo/shared_data/sequencing_data/novaseq_baboons/flow_cell1/Tung_8475_230606B7', 
+                 '/mnt/primevo/shared_data/sequencing_data/novaseq_baboons/flow_cell2/Tung_8475_230530A6', 
+                 '/mnt/primevo/shared_data/sequencing_data/novaseq_baboons/flow_cell3/Tung_8475_230531A7']:
+    tmp = [f for f in listdir(filepath) if isfile(join(filepath, f)) and 'fastq'  in f and 'R1' in f]
+    onlyfiles += tmp
+    filepaths += [filepath]*len(tmp)
+# dct = {}
+for i, run in enumerate(onlyfiles):
+    ilist = run.split('_')
+    if "_".join(ilist[:-4]) not in dct: dct["_".join(ilist[:-4])] = []
+    dct["_".join(ilist[:-4])].append((ilist[-4]+'_'+ilist[-3], filepaths[i]))
+
+# print(list(dct.keys()))
+
+study_name_new = "amboseli_all"
+for chr in chr_lst:
+    gwf.target_from_template(
+        f"{study_name_new}_{chr}_combine_gVCFs", 
+        combine_gvcfs(
+            infiles = [f"../steps/09_call_variants/{individual}_{chr}.g.vcf.gz" for individual in list(dct.keys())],
+            chr = chr,
+            workpath = f'../steps/10_combine_gvcfs/{study_name_new}/{chr}/',
+            done = f"../done/10_combine_gvcfs/done_{study_name_new}_{chr}",
+            done_prev = [f"../done/09_call_variants/{individual}_{chr}" for individual in list(dct.keys())]
+            )
+        )
+    gwf.target_from_template(
+        f"{study_name_new}_{chr}_genotype_gVCFs", 
+        genotype_gvcfs(
+            infile =  f"gendb://../steps/10_combine_gvcfs/{study_name_new}/{chr}/",
+            ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+            outfile = f"../steps/11_final_vcf/{study_name_new}/{chr}.combined.vcf.gz",
+            done = f"../done/11_final_vcf/done_{study_name_new}_{chr}",
+            done_prev = f"../done/10_combine_gvcfs/done_{study_name_new}_{chr}"
+            )
+        )
+gwf.target_from_template(
+    f"{study_name_new}_concatenate_VCFs", 
+    concatenate_vcfs(
+        infiles =  [f"../steps/11_final_vcf/{study_name_new}/{chr}.combined.vcf.gz" for chr in chr_lst],
+        outfile = f"../steps/12_concatenated_vcf/{study_name_new}.vcf.gz",
+        done = f"../done/12_concatenated_vcf/done_{study_name_new}",
+        done_prev = [f"../done/11_final_vcf/done_{study_name_new}_{chr}" for chr in chr_lst]
+        )
+    )

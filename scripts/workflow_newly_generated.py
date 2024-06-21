@@ -23,8 +23,6 @@ for i, run in enumerate(onlyfiles):
     if "_".join(ilist[:-4]) not in dct: dct["_".join(ilist[:-4])] = []
     dct["_".join(ilist[:-4])].append((ilist[-4]+'_'+ilist[-3], filepaths[i]))
 
-"R1_001.fastq.gz"
-
 # conda activate baboon_genotyping
 
 chr_lst = [
@@ -124,6 +122,30 @@ for individual in list(dct.keys()):
             done_prev = f"../done/06_mark_and_remove_duplicates/{individual}"
             )
         )
+    intermediate_bams = [
+        f"../steps/05_merge_bams/{individual}.mapped.sorted.bam",
+        # f"../steps/06_mark_and_remove_duplicates/{individual}.mapped.nodupes.bam",
+        f"../steps/08_rename_merged_bam/{individual}.mapped.nodupes.renamed.bam"
+        ]
+    for bam in intermediate_bams:
+        gwf.target_from_template(
+            f"{bam.split("/")[-1].replace('-', '_')}_count_all_reads",
+            count_all_reads(
+                infile = bam,
+                outfile = f"../steps/16_count_reads/{bam.split("/")[-1]}.all_reads.txt",
+                done = f"../done/16_count_reads/{bam.split("/")[-1]}.all_reads",
+                done_prev = f"{"/".join(bam.split("/")[0:-1]).replace("steps", "done")}/{individual}"
+                )
+            )
+        gwf.target_from_template(
+            f"{bam.split("/")[-1].replace('-', '_')}_count_mapped_reads",
+            count_mapped_reads(
+                infile = bam,
+                outfile = f"../steps/16_count_reads/{bam.split("/")[-1]}.mapped_reads.txt",
+                done = f"../done/16_count_reads/{bam.split("/")[-1]}.mapped_reads",
+                done_prev = f"{"/".join(bam.split("/")[0:-1]).replace("steps", "done")}/{individual}"
+                )
+            )
     
 for individual in list(dct.keys()):
     for chr in chr_lst:

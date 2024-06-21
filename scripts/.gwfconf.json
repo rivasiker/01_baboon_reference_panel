@@ -1,3 +1,4 @@
 {
-    "backend": "slurm"
+    "backend": "slurm",
+    "clean_logs": false
 }
