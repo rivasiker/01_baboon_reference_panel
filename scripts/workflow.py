@@ -307,7 +307,7 @@ def genotype_gvcfs(infile, ref, outfile, done, done_prev):
     /mnt/primevo/shared_data/software/gatk/gatk-4.3.0.0/gatk GenotypeGVCFs -R {ref} -V {infile} -O {outfile}
     touch {done}
     """
-    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec, protect=outputs)
 
 
 ############################################################################################
@@ -323,7 +323,7 @@ def concatenate_vcfs(infiles, outfile, done, done_prev):
     bcftools concat --threads 8 -o {outfile} {" ".join(infiles)}
     touch {done}
     """
-    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec)
+    return AnonymousTarget(inputs=inputs, outputs=outputs, options=options, spec=spec, protect=outputs)
 
 
 ##############################################################################################

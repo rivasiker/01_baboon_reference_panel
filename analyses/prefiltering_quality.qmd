@@ -10,7 +10,7 @@ editor: source
 
 library(tidyverse)
 study_name = "robinson_2019_and_kuderna_2023_NC_044995.1"
-# study_name = "amboseli_all_NC_044995.1"
+study_name = "amboseli_all_NC_044995.1"
 # study_name = "robinson_2019_filtered"
 path = paste0('../steps/13_qc/', study_name)
 
@@ -289,9 +289,9 @@ The default kinship coefficient estimation only involves the use of SNP data fro
 ```{r fig.height=10, fig.width=10}
 
 tab_relatedness <- read_delim(
-  # paste0(path, ".relatedness2"),
+  paste0(path, ".relatedness2"),
   # '../steps/13_qc/amboseli_all_NC_044995.1.relatedness2',
-  '../steps/13_qc/robinson_2019_and_kuderna_2023_NC_044995.1.relatedness2',
+  # '../steps/13_qc/robinson_2019_and_kuderna_2023_NC_044995.1.relatedness2',
   delim = "\t",
   show_col_types = FALSE
 )
@@ -307,13 +307,15 @@ tab_relatedness |>
   scale_color_viridis_c() +
   coord_fixed()
 
+ggsave(paste0("filtering_plots/", study_name, '_relatedness2.png'))
+
 ```
 
 ```{r fig.height=20, fig.width=20}
 
 tab_relatedness <- read_delim(
-  # paste0(path, ".relatedness2"),
-  '../steps/13_qc/amboseli_all_NC_044995.1.relatedness',
+  paste0(path, ".relatedness"),
+  # '../steps/13_qc/amboseli_all_NC_044995.1.relatedness',
   # '../steps/13_qc/robinson_2019_and_kuderna_2023_NC_044995.1.relatedness',
   delim = "\t",
   show_col_types = FALSE
