@@ -2,6 +2,7 @@ from gwf import Workflow, AnonymousTarget
 from workflow import *
 from os import listdir
 from os.path import isfile, join
+import pandas as pd
 
 gwf = Workflow()
 
