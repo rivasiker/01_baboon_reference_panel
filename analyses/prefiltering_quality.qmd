@@ -153,6 +153,8 @@ ind_depth |>
   geom_histogram(fill = "dodgerblue1",
                  colour = "black",
                  alpha = 0.3) +
+  # geom_vline(aes(xintercept = depth), color = "red",
+  #            data = filter(ind_depth, ind %in% c("UNK-F-4-16-2018", "UNK-M-9-21-2017"))) +
   theme_light() +
   labs(
     title = "Mean depth per individual",
@@ -179,6 +181,8 @@ ind_miss |>
   geom_histogram(fill = "dodgerblue1",
                  colour = "black",
                  alpha = 0.3) + 
+  # geom_vline(aes(xintercept = fmiss), color = "red",
+  #            data = filter(ind_miss, ind %in% c("UNK-F-4-16-2018", "UNK-M-9-21-2017"))) +
   theme_light() +
   labs(
     title = "Proportion of missing data per individual",
@@ -204,6 +208,8 @@ ind_het |> ggplot(aes(f)) +
   geom_histogram(fill = "dodgerblue1",
                  colour = "black",
                  alpha = 0.3) +
+  # geom_vline(aes(xintercept = f), color = "red",
+  #            data = filter(ind_het, ind %in% c("UNK-F-4-16-2018", "UNK-M-9-21-2017"))) +
   theme_light() +
   labs(
     title = "Inbreeding",
@@ -214,6 +220,39 @@ ind_het |> ggplot(aes(f)) +
 ggsave(paste0("filtering_plots/", study_name, '_het.png'))
 
 ```
+
+```{r}
+
+# ind_het <- read_delim(
+#   paste0(path, ".het"),
+#   delim = "\t",
+#   col_names = c("ind", "obs_hom", "exp_hom", "nsites", "f"),
+#   skip = 1,
+#   show_col_types = FALSE
+# ) |> 
+#   rowwise() |> 
+#   filter(
+#     str_length(ind) == 3 | str_detect(ind, "UNK")
+#   )
+# 
+# ind_het |> ggplot(aes(f)) +
+#   geom_histogram(fill = "dodgerblue1",
+#                  colour = "black",
+#                  alpha = 0.3) +
+#   geom_vline(aes(xintercept = f), color = "red",
+#              data = filter(ind_het, ind %in% c("UNK-F-4-16-2018", "UNK-M-9-21-2017"))) +
+#   theme_light() +
+#   labs(
+#     title = "Inbreeding",
+#     x = "Inbreeding coefficient",
+#     y = "Count"
+#   )
+
+
+```
+
+
+
 ## Hardy-Weinberg equilibrium
 
 ```{r}
@@ -344,7 +383,7 @@ ggsave(paste0("filtering_plots/", study_name, '_relatedness.png'))
 ```{r}
 
 read_tab <- tibble(
-  individual = ind_depth$ind,
+  individual = ind_het$ind,
   mapped_sorted_bam_all_reads = NA,
   mapped_sorted_bam_mapped_reads = NA,
   # mapped_nodupes_bam_all_reads = NA,
@@ -353,13 +392,13 @@ read_tab <- tibble(
   mapped_nodupes_renamed_bam_mapped_reads = NA
 )
 
-for (i in 1:length(ind_depth$ind)) {
-  read_tab[i,2] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.sorted.bam.all_reads.txt"), quiet = TRUE)
-  read_tab[i,3] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.sorted.bam.mapped_reads.txt"), quiet = TRUE)
-  # read_tab[i,4] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.bam.all_reads.txt"), quiet = TRUE)
-  # read_tab[i,5] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.bam.mapped_reads.txt"), quiet = TRUE)
-  read_tab[i,4] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.renamed.bam.all_reads.txt"), quiet = TRUE)
-  read_tab[i,5] <- scan(paste0("../steps/16_count_reads/", ind_depth$ind[i], ".mapped.nodupes.renamed.bam.mapped_reads.txt"), quiet = TRUE)
+for (i in 1:length(ind_het$ind)) {
+  read_tab[i,2] <- scan(paste0("../steps/16_count_reads/", ind_het$ind[i], ".mapped.sorted.bam.all_reads.txt"), quiet = TRUE)
+  read_tab[i,3] <- scan(paste0("../steps/16_count_reads/", ind_het$ind[i], ".mapped.sorted.bam.mapped_reads.txt"), quiet = TRUE)
+  # read_tab[i,4] <- scan(paste0("../steps/16_count_reads/", ind_het$ind[i], ".mapped.nodupes.bam.all_reads.txt"), quiet = TRUE)
+  # read_tab[i,5] <- scan(paste0("../steps/16_count_reads/", ind_het$ind[i], ".mapped.nodupes.bam.mapped_reads.txt"), quiet = TRUE)
+  read_tab[i,4] <- scan(paste0("../steps/16_count_reads/", ind_het$ind[i], ".mapped.nodupes.renamed.bam.all_reads.txt"), quiet = TRUE)
+  read_tab[i,5] <- scan(paste0("../steps/16_count_reads/", ind_het$ind[i], ".mapped.nodupes.renamed.bam.mapped_reads.txt"), quiet = TRUE)
 }
 
 

@@ -56,7 +56,7 @@ for study_name in study_name_list:
     #         f"{study_name}_{chr}_genotype_gVCFs", 
     #         genotype_gvcfs(
     #             infile =  f"gendb://../steps/10_combine_gvcfs/{study_name}/{chr}/",
-    #             ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+    #             ref = "/mnt/primevo/work/iker_rivas_gonzalez/01_baboon_reference_panel/data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
     #             outfile = f"../steps/11_final_vcf/{study_name}/{chr}.combined.vcf.gz",
     #             done = f"../done/11_final_vcf/done_{study_name}_{chr}",
     #             done_prev = f"../done/10_combine_gvcfs/done_{study_name}_{chr}"
@@ -110,7 +110,7 @@ for chr in chr_lst:
             f"{study_name_new}_and_{study_name_old}_{chr}_genotype_gVCFs", 
             genotype_gvcfs(
                 infile =  f"gendb://../steps/10_combine_gvcfs/{study_name}/{chr}/",
-                ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+                ref = "/mnt/primevo/work/iker_rivas_gonzalez/01_baboon_reference_panel/data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
                 outfile = f"../steps/11_final_vcf/{study_name_new}_and_{study_name_old}/{chr}.combined.vcf.gz",
                 done = f"../done/11_final_vcf/done_{study_name_new}_and_{study_name_old}_{chr}",
                 done_prev = f"../done/10_combine_gvcfs/done_{study_name_new}_to_{study_name_old}_{chr}"
@@ -182,7 +182,7 @@ for chr in chr_lst:
         f"{study_name_new}_{chr}_genotype_gVCFs", 
         genotype_gvcfs(
             infile =  f"gendb://../steps/10_combine_gvcfs/{study_name_new}/{chr}/",
-            ref = "../data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
+            ref = "/mnt/primevo/work/iker_rivas_gonzalez/01_baboon_reference_panel/data/reference_data/newref/GCF_008728515.1_Panubis1.0_genomic.fna",
             outfile = f"../steps/11_final_vcf/{study_name_new}/{chr}.combined.vcf.gz",
             done = f"../done/11_final_vcf/done_{study_name_new}_{chr}",
             done_prev = f"../done/10_combine_gvcfs/done_{study_name_new}_{chr}"
