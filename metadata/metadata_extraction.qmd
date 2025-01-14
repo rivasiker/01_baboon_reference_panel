@@ -124,6 +124,8 @@ shuyu_list %in% Robinson$sample_accession
 
 All of the samples are found.
 
+6 of the samples have two sample_accessions. The larger set of numbers corresponds to an unpublished resequencing effort. thus, we will filter out those samples
+
 ```{r}
 
 only_100 <- Robinson |> 
@@ -134,9 +136,27 @@ only_100 <- Robinson |>
   ungroup() |> 
   filter(sample_alias %in% lst) 
 
-paste(only_100$sample_accession, collapse = "', '")
+repeated <- only_100 |> 
+  group_by(sample_alias) |> 
+  filter(n() > 1) |> 
+  mutate(
+    founder = sample_accession %in% shuyu_list
+  ) |> 
+  arrange(sample_accession)
+
+paste(only_100$sample_accession[!(only_100$sample_accession %in% repeated$sample_accession[7:12])], collapse = "', '")
 
 ```
+According to Gencove, these have large duplication rates:
+
+```{r}
+
+only_100 |> 
+  filter(sample_alias %in% c("17199", "19181"))
+
+```
+
+
 
 ```{r}
 
@@ -148,6 +168,9 @@ Robinson |>
   write_csv('robinson_sampleAlias_to_sampleAccession.csv')
 
 ```
+
+
+
 
 
 
@@ -510,11 +533,13 @@ total_table <- bind_rows(prev, new) |>
   group_by(sname) |> 
   summarise(
     gDNA_coverage = sum(coverage),
-    n = n()
+    n = n(),
+    tag = paste0(type, collapse = ",")
   ) |> 
   left_join(fec, by = "sname") 
 
 total_table  |> 
+  select(-tag) |> 
   write_csv('Amboseli_gDNA_fDNA_stats_20240319.csv')
 
 total_table |> 
@@ -525,6 +550,9 @@ sum(new$sname %in% prev$sname)
 
 read_csv('newly_sequenced_baboons_coverage.csv') |> 
   filter(sname == "WAJ")
+
+total_table |> 
+  filter(tag == "new")
 
 ```
 
